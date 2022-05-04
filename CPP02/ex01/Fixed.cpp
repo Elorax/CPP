@@ -7,14 +7,16 @@ Fixed::Fixed() : m_value(0)
 
 Fixed::Fixed(const int nb)
 {
-	this->m_value = nb << this->m_nbBitFracPart;
+	cout << "Int constructor called" << endl;
+	this->m_value = nb << this->m_nbBitsFracPart;
 }
 
 Fixed::Fixed(const float nb)
 {
 	float temp;
-	//
-	temp = nb * (1 << this->m_nbBitFracPart);
+
+	cout << "Float constructor called" << endl;
+	temp = nb * (1 << this->m_nbBitsFracPart);
 	this->m_value = (int)roundf(temp);
 
 }
@@ -32,15 +34,16 @@ Fixed::~Fixed()
 
 int 	Fixed::getRawBits(void) const
 {
-	cout << "getRawBits member function called" << endl;
+//	cout << "getRawBits member function called" << endl;
 	return(this->m_value);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	cout << "setRawBits member function called" << endl;
+//	cout << "setRawBits member function called" << endl;
 	this->m_value = raw;
 }
+
 
 Fixed& Fixed::operator=(const Fixed &toAssign)
 {
@@ -54,24 +57,14 @@ int	Fixed::toInt(void) const
 	return (this->m_value >> 8);
 }
 
-float	negPowerOfTwo(int pow)
+float	Fixed::toFloat(void) const
 {
-	float ret(1);
-
-	for(int i = 0; i < pow; i++)
-	{
-		ret/=2;
-	}
-	return(ret);
-}
-
-float	toFloat(void) const
-{
-	return (this->m_value >> this->m_nbBitsFracPart);
+	return (this->m_value / (float)(1 << Fixed::m_nbBitsFracPart));
 }
 
 std::ostream &operator<<(std::ostream &flux, Fixed const& fixed)
 {
+	cout << "ostream operator called" << endl;
 	flux << fixed.toFloat();
 	return (flux);
 }

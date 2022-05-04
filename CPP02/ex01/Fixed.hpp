@@ -3,7 +3,6 @@
 # include <iostream>
 # include <string>
 # include <cmath>
-//# include ".hpp"
 
 using	std::string;
 using	std::cout;

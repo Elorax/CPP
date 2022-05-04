@@ -20,5 +20,9 @@ int main()
 	cout << "c is " << c.toInt() << " as integer" << endl;
 	cout << "d is " << d.toInt() << " as integer" << endl;
 
+	cout << "a is " << a.toFloat() << " as float" << endl;
+	cout << "b is " << b.toFloat() << " as float" << endl;
+	cout << "c is " << c.toFloat() << " as float" << endl;
+	cout << "d is " << d.toFloat() << " as float" << endl;
 	return (0);
 }
