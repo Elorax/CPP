@@ -64,7 +64,6 @@ float	Fixed::toFloat(void) const
 
 std::ostream &operator<<(std::ostream &flux, Fixed const& fixed)
 {
-	cout << "ostream operator called" << endl;
 	flux << fixed.toFloat();
 	return (flux);
 }
