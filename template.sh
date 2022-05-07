@@ -19,22 +19,35 @@ class	${newclass}
 {
 	public:
 	${newclass}();
+	${newclass}(const ${newclass}&);
+	${newclass}	&operator=(const ${newclass}&);
 	~${newclass}();
 
-	private:
-	string	m_name;
-
+	protected:
+	string	_name;
 };
 
 #endif" > "${newclass}.hpp"
 
 	echo "#include \"${newclass}.hpp\"
 
-${newclass}::${newclass}(string name): m_name(name)
+${newclass}::${newclass}(string name)
 {
+
+}
+${newclass}::${newclass}(const ${newclass}& toCopy)
+{
+
+}
+
+${newclass}	&${newclass}::operator=(const ${newClass}& toAssign)
+{
+
+	return (*this);
 }
 
 ${newclass}::~${newclass}()
 {
+
 }" > "${newclass}.cpp"
 done

@@ -1,20 +1,29 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 
 int main ()
 {
-	ClapTrap	R2D2("Pepere");
-	ClapTrap	Fake_R2D2(R2D2);
-	ClapTrap	C3PO("osef");
+	ClapTrap	Pepere("Pepere");
+	ScavTrap	Pepere_v2("Pepere_v2");
+	ScavTrap	Contrefacon(Pepere_v2);
 
-	R2D2.attack("nothing");
-	Fake_R2D2.attack("nothing again");
-	R2D2.takeDamage(4);
 
-	C3PO = R2D2;
-	R2D2.beRepaired(3);
-	cout << C3PO;
-	cout << R2D2;
+	Pepere.attack("nothing");
+	Pepere_v2.attack("nothing");
 
+	Contrefacon.guardGate();
+	Pepere_v2.guardGate();
+	
+	cout << Pepere_v2;
+	Pepere_v2.takeDamage(4);
+	Pepere_v2.beRepaired(3);
+	cout << Pepere;
+	cout << Pepere_v2;
+	cout << "----------------------" << endl;
+
+	ClapTrap lele;
+	ScavTrap lele_v2;
+	cout << lele;
+	cout << lele_v2;
 	return (0);
 }
