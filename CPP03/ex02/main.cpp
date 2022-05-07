@@ -4,7 +4,7 @@
 
 int main ()
 {
-	FragTrap	ft("K.R.O.T.E");
+	FragTrap	ft("K.R.0.T.E");
 
 	ft.highFivesGuys();
 	cout << ft;

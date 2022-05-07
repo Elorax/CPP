@@ -1,22 +1,24 @@
-SRCS	=		main.cpp	\
-			ClapTrap.cpp	\
-			ScavTrap.cpp	\
-			FragTrap.cpp
+SRCS	=	main.cpp		\
+			WrongCat.cpp	\
+			WrongAnimal.cpp	\
+			Dog.cpp			\
+			Cat.cpp			\
+			Animal.cpp		
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-CCPP	=	g++
+CXX	=	c++
 RM	=	rm -rf
 
-CPPFLAGS	=	-Wall -Wextra -Werror
+CXXFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	Fraggy
+NAME	=	BrainedAnimals
 
 #%.o: %.cpp
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 
