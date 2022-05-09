@@ -20,6 +20,7 @@ Cat	&Cat::operator=(const & toAssign)
 
 Cat::~Cat()
 {
+	delete (this->brain);
 	cout << "MEAOEJAEAAOOOHZZN!!!" << endl;
 }
 

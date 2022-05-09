@@ -20,6 +20,7 @@ Dog	&Dog::operator=(const & toAssign)
 
 Dog::~Dog()
 {
+	delete (this->brain);
 	cout << "Dog just bite the dust." << endl;
 }
 

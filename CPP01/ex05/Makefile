@@ -3,10 +3,10 @@ SRCS	=		main.cpp	\
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-CCPP	=	g++
+CXX	=	c++
 RM	=	rm -rf
 
-CPPFLAGS	=	-Wall -Wextra -Werror
+CXXFLAGS	=	-Wall -Wextra -Werror
 
 NAME	=	harl
 

@@ -47,6 +47,6 @@ int main(int ac, char **av)
 
 	ofs << str;
 	ofs.close();
-	cout << str << endl;
+//	cout << str << endl;
 	return (0);
 }

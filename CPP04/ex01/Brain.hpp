@@ -8,14 +8,17 @@ using	std::cout;
 using	std::endl;
 
 class	Brain
-{
+{ 
 	public:
 	Brain();
 	Brain(const Brain&);
 	Brain	&operator=(const Brain&);
 	~Brain();
 
-	protected:
+	void	setIdea(string str, int nb);
+	string	getIdea(int nb) const;
+
+	private:
 	string	ideas[100];
 };
 

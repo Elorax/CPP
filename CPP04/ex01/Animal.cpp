@@ -2,22 +2,22 @@
 
 Animal::Animal(): _type("Animal")
 {
-	_brain = new Brain();
+	brain = new Brain();
 	cout << "Animal created !" << endl;
 }
 
 Animal::Animal(const Animal& toCopy)
 {
 	cout << "Animal copy constructor called" << endl;
-	_brain = new Brain(toCopy._brain);
+	brain = new Brain(*(toCopy.brain));
 	this->_type = toCopy._type;
 }
 
 
-//a voir pour pas leak
 Animal	&Animal::operator=(const Animal &toAssign)
 {
 	this->_type = toAssign._type;
+	this->brain = new Brain(*(toAssign.brain));
 	return (*this);
 }
 
@@ -28,11 +28,21 @@ string	Animal::getType() const
 
 Animal::~Animal()
 {
-	delete (this->_brain);
+	if (this->brain)
+		delete (this->brain);
 	cout << "Animal DESTROYED" << endl;
 }
 
 void	Animal::makeSound() const
 {
 	cout << "*makes some strange sounds*" << endl;
+}
+
+string	Animal::getIdea(int nb) const
+{
+	return (this->brain->getIdea(nb));
+}
+void	Animal::setIdea(string str, int nb)
+{
+	this->brain->setIdea(str, nb);
 }
