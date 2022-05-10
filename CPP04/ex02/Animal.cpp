@@ -27,8 +27,3 @@ Animal::~Animal()
 {
 	cout << "Animal DESTROYED" << endl;
 }
-
-void	Animal::makeSound() const
-{
-	cout << "*makes some strange sounds*" << endl;
-}
