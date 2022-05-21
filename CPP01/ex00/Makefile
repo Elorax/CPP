@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/21 04:43:07 by abiersoh          #+#    #+#              #
+#    Updated: 2022/05/21 04:43:12 by abiersoh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=		newZombie.cpp	\
 			randomChump.cpp	\
 			Zombie.cpp	\
@@ -16,7 +28,7 @@ NAME	=	Braaaaiiiiinnnzzzz
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 

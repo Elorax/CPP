@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/21 04:44:53 by abiersoh          #+#    #+#              #
+#    Updated: 2022/05/21 04:44:55 by abiersoh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=		main.cpp	\
 
 OBJS	=	$(SRCS:.cpp=.o)
@@ -13,7 +25,7 @@ NAME	=	HI_THIS_IS_BRAIN
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 

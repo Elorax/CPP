@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/21 04:46:50 by abiersoh          #+#    #+#              #
+#    Updated: 2022/05/21 04:46:52 by abiersoh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=		main.cpp	\
 			Weapon.cpp	\
 			HumanA.cpp	\
@@ -16,7 +28,7 @@ NAME	=	Unnecessary_violence
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 

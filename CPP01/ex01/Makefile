@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/21 04:43:19 by abiersoh          #+#    #+#              #
+#    Updated: 2022/05/21 04:43:20 by abiersoh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=		zombieHorde.cpp	\
 			Zombie.cpp	\
 			main.cpp	\
@@ -12,10 +24,10 @@ CXXFLAGS	=	-Wall -Wextra -Werror
 NAME	=	Braaaaiiiiinnnzzzz
 
 #%.o: %.cpp
-#		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
+#		$(CXX) $(CXXFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 
