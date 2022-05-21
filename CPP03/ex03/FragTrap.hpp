@@ -1,12 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/21 16:49:18 by abiersoh          #+#    #+#             */
+/*   Updated: 2022/05/21 16:49:19 by abiersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 # include <iostream>
 # include <string>
 # include "ClapTrap.hpp"
-
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	FragTrap : virtual public ClapTrap
 {
@@ -15,8 +23,6 @@ class	FragTrap : virtual public ClapTrap
 	FragTrap(const FragTrap&);
 	~FragTrap();
 	void	highFivesGuys();
-
-	protected:
 };
 
 #endif
