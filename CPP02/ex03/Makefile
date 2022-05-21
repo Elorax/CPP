@@ -1,5 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/21 05:37:46 by abiersoh          #+#    #+#              #
+#    Updated: 2022/05/21 05:42:03 by abiersoh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=		main.cpp	\
-			Fixed.cpp
+			Fixed.cpp		\
+			Point.cpp		\
+			bsp.cpp			
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -8,13 +22,13 @@ RM	=	rm -rf
 
 CXXFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	fixed
+NAME	=	BSP
 
 #%.o: %.cpp
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 
