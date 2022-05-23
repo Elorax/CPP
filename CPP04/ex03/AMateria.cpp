@@ -1,27 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/23 20:09:12 by abiersoh          #+#    #+#             */
+/*   Updated: 2022/05/23 20:09:14 by abiersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AMateria.hpp"
 
 AMateria::AMateria(string const &type): _type(type)
 {
-	//cout << "AMateria constructor called" << endl;
-}
-AMateria::AMateria(const AMateria& toCopy)
-{
-	//cout << "AMateria copy constructor" << endl;
-	_type = toCopy._type;
-}
-
-AMateria	&AMateria::operator=(const AMateria &toAssign)
-{
-	this->_type = toAssign._type;
-	return (*this);
 }
 
 AMateria::~AMateria()
 {
-	//cout << "AMateria destructor" << endl;
 }
 
-void	AMateria::use(Icharacter &target)
+void	AMateria::use(ICharacter const &target)
 {
-	
+	if (this->_type == "ice")
+		cout << "*shoots an ice bolt at " << target.getName() << " *" << endl;
+	else if (this->_type == "cure")
+		cout << "*heals " << target.getName() << "'s wounds *" << endl;
+}
+
+string const &AMateria::getType() const
+{
+	return (this->_type);
 }

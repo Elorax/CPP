@@ -1,21 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/23 20:09:47 by abiersoh          #+#    #+#             */
+/*   Updated: 2022/05/23 20:09:48 by abiersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ICharacter.hpp"
-
-ICharacter::ICharacter(string name)
-{
-
-}
-ICharacter::ICharacter(const ICharacter& toCopy)
-{
-
-}
-
-ICharacter	&ICharacter::operator=(const & toAssign)
-{
-
-	return (*this);
-}
 
 ICharacter::~ICharacter()
 {
-
 }
