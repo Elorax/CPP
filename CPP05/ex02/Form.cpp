@@ -83,8 +83,8 @@ std::ostream &operator<<(std::ostream &o, const Form &form)
 void	Form::execute(Bureaucrat const &executor) const
 {
 	if (!this->isSigned() || executor.getGrade() > this->getExecGrade())
-		throw Form::notSignedException();
+		throw Form::NotSignedException();
 	if (executor.getGrade() > this->getExecGrade())
-		throw Form::gradeTooLowException();
+		throw Form::GradeTooLowException();
 	this->doJob();
 }

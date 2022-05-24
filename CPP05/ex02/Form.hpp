@@ -47,6 +47,15 @@ class	Form
 			}
 		
 	};
+	class	NotSignedException: public std::exception
+	{
+		public:
+			virtual const char *what() const throw()
+			{
+				return ("Exception Form : not signed !");
+			}
+		
+	};
 
 	const string &getName() const;
 	bool isSigned() const;

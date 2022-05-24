@@ -10,17 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(const string &target): Form("robotomy request form", 72, 45), _target(target)
 {
 
 }
 
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+
+}
 #include <cstdlib>
 #include <ctime>
 
-void	RobotomyRequestForm::dojob() const
+void	RobotomyRequestForm::doJob() const
 {
 	std::srand(std::time(nullptr));
 	if (std::rand() % 2)

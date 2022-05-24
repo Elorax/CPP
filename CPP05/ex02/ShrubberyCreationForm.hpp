@@ -13,7 +13,7 @@
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 # include "Form.hpp"
-
+# include <fstream>
 class	ShrubberyCreationForm : public Form
 {
 	public:
@@ -21,7 +21,7 @@ class	ShrubberyCreationForm : public Form
 	~ShrubberyCreationForm();
 
 	private:
-	void	dojob(void) const;
+	void	doJob(void) const;
 	string	_target;
 };
 #endif

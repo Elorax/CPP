@@ -10,18 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(const string &target): Form("shrubbery creation form", 145, 137), _target(target)
 {
 
 }
 
-void	ShrubberyCreationForm::dojob() const
+ShrubberyCreationForm::~ShrubberyCreationForm()
+{
+
+}
+void	ShrubberyCreationForm::doJob() const
 {
 	std::fstream fout;
 
-	fout.open(this->_target, std::ios_base::out);
+	fout.open(this->_target + "_shrubbery", std::ios_base::out);
 	if (!fout.is_open())
 	{
 		cout << "failed to open " << this->_target << endl;
@@ -30,7 +34,7 @@ void	ShrubberyCreationForm::dojob() const
 	{
 		fout << "              v .   ._, |_  .," << endl;
 		fout << "           `-._\\/  .  \\ /    |/_" << endl;
-		fout << "               \\  _\\, y | \\\/\/" << endl;
+		fout << "               \\  _\\, y | \\//" << endl;
 		fout << "         _\\_.___\\\\, \\\\/ -.\\||" << endl;
 		fout << "           `7-,--.`._||  / / ," << endl;
 		fout << "           /'     `-. `./ / |/_.' " << endl;

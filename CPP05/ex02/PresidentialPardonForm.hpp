@@ -21,7 +21,7 @@ class	PresidentialPardonForm : public Form
 	~PresidentialPardonForm();
 
 	private:
-	void	dojob(void) const;
+	void	doJob(void) const;
 	string	_target;
 };
 

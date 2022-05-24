@@ -10,18 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(const string &target): Form("Presidential Pardon Form", 25, 5), _target(target)
 {
 
 }
 
-PresidentialPardonForm::~PresidentialPardonForm
+PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void	PresidentialPardonForm::dojob() const
+void	PresidentialPardonForm::doJob() const
 {
 	cout << this->_target << " has been forgiven by Zaphod Beeblebrox." << endl;
 }

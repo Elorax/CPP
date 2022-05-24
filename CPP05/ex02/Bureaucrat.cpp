@@ -82,7 +82,7 @@ void	Bureaucrat::signForm(Form &form) const
 		cout << this->_name << " couldn't sign " << form.getName() << " because grade is too low" << endl;
 }
 
-void	Bureaucrat::executeForm(Form const &form)
+void	Bureaucrat::executeForm(Form const &form) const
 {
 	if (form.isSigned())
 		form.execute(*this);
