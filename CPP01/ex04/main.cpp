@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 04:47:28 by abiersoh          #+#    #+#             */
-/*   Updated: 2022/05/21 04:47:29 by abiersoh         ###   ########.fr       */
+/*   Updated: 2022/05/24 18:34:09 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,5 @@ int main(int ac, char **av)
 
 	ofs << str;
 	ofs.close();
-//	cout << str << endl;
 	return (0);
 }

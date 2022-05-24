@@ -25,13 +25,57 @@ int main()
 	Form	*robot = new RobotomyRequestForm("K.R.O.T.E");
 	Form	*sujet = new PresidentialPardonForm("Fchouky");
 
-	patron.executeForm(*shrub);
-	patron.signForm(*shrub);
-	patron.executeForm(*shrub);
+	try
+	{
+		patron.executeForm(*shrub);
+	}
+	catch (const std::exception &e)
+	{
+		cout << e.what() << endl;
+	}
 
-	patron.signForm(*robot);
-	patron.signForm(*sujet);
-	stagiaire.executeForm(*sujet);
+	try
+	{
+		patron.signForm(*shrub);
+	}
+	catch(const std::exception& e)
+	{
+		cout << e.what() << endl;
+	}
+	try
+	{
+		patron.executeForm(*shrub);
+	}
+	catch(const std::exception& e)
+	{
+		cout << e.what() << endl;
+	}
+	try
+	{
+		patron.signForm(*robot);
+	}
+	catch (const std::exception &e)
+	{
+		cout << e.what() << endl;
+	}
+	try
+	{
+		patron.signForm(*sujet);
+	}
+	catch (const std::exception &e)
+	{
+		cout << e.what() << endl;
+	}
+	try
+	{
+		stagiaire.executeForm(*sujet);
+	}
+	catch (const std::exception &e)
+	{
+		cout << e.what() << endl;
+	}
+	stagiaire.signForm(*sujet);
+
 	patron.executeForm(*sujet);
 	patron.executeForm(*robot);
 

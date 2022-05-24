@@ -15,9 +15,6 @@
 ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
 	cout << "ClapTrap constructor called" << endl;
-	this->_hp = 10;
-	this->_ep = 10;
-	this->_ad = 0;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &toCopy)

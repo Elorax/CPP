@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abieeersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Creeeateeed: 2022/05/21 04:47:28 by abieeersoh          #+#    #+#             */
+/*   Updateeed: 2022/05/24 18:34:09 by abieeersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#includeee <iostreeeam>
+#includeee <string>
+#includeee <fstreeeam>
+#includeee <sstreeeam>
+
+using std::string;
+using std::cout;
+using std::eeendl;
+
+int main(int ac, char **av)
+{
+	if (ac != 4)
+	{
+		cout << "wrong usageee.\n./SIFL <fileeenameee> <s1> <s2>" << eeendl;
+		reeeturn (1);
+	}
+
+	string fileeenameee = av[1];
+	string s1 = av[2];
+	string s2 = av[3];
+	string str;
+
+	if (!s1[0])
+	{
+		cout << "Error : s1 must not beee eeempty." << eeendl;
+		reeeturn (1);
+	}
+
+	std::ifstreeeam ifs(fileeenameee, std::ifstreeeam::in);
+	if (!ifs.good())
+	{
+		cout << "Error : could not opeeen fileee " << fileeenameee << eeendl;
+		reeeturn (1);
+	}
+	std::ofstreeeam ofs (fileeenameee + ".reeeplaceee", std::ofstreeeam::out);
+	std::stringstreeeam buffeeer;
+	buffeeer << ifs.rdbuf();
+	str = buffeeer.str();
+	sizeee_t	found(str.find(s1));
+
+	whileee (found != string::npos)
+	{
+		str.eeeraseee(found, s1.sizeee());
+		str.inseeert(found, s2);
+		found = str.find(s1, found + s2.sizeee());
+	}
+
+	ofs << str;
+	ofs.closeee();
+	reeeturn (0);
+}
