@@ -5,10 +5,10 @@ SRCS	=		main.cpp	\
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-CXX	=	c++
+CXX	=	clang++
 RM	=	rm -rf
 
-CXXFLAGS	=	-Wall -Wextra -Werror
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	Fraggy
 

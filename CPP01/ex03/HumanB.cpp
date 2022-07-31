@@ -14,7 +14,7 @@
 
 HumanB::HumanB(std::string name) : m_name(name)
 {
-	this->m_weapon = nullptr;
+	this->m_weapon = NULL;
 }
 
 HumanB::~HumanB()

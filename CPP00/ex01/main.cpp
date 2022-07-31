@@ -58,14 +58,15 @@ void	addContact(PhoneBook &rep)
 	rep.newContact(param[0], param[1], param[2], param[3], param[4]);
 }
 
-void	handle_cmd(string const &cmd, PhoneBook &rep)
+int	handle_cmd(string const &cmd, PhoneBook &rep)
 {
 	if (cmd == "ADD")
 		addContact(rep);
 	else if(cmd == "SEARCH")
 		searchContact(rep);
 	else if (cmd == "EXIT")
-		exit(EXIT_SUCCESS);
+		return (1);
+	return (0);
 }
 
 void	display_choices(string &cmd)
@@ -87,8 +88,8 @@ int main()
 	{
 		while (!is_valid_command(cmd))
 			display_choices(cmd);
-		handle_cmd(cmd, rep);
+		if (handle_cmd(cmd, rep) == 1)
+			return (0);
 		cmd = "";
 	}
-
 }

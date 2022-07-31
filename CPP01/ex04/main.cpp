@@ -31,6 +31,8 @@ int main(int ac, char **av)
 	string s1 = av[2];
 	string s2 = av[3];
 	string str;
+//	char	*c_filename = new char[filename.length() + 1];
+//	std::strcpy(c_filename, 
 
 	if (!s1[0])
 	{
@@ -38,13 +40,13 @@ int main(int ac, char **av)
 		return (1);
 	}
 
-	std::ifstream ifs(filename, std::ifstream::in);
+	std::ifstream ifs(filename.c_str(), std::ifstream::in);
 	if (!ifs.good())
 	{
 		cout << "Error : could not open file " << filename << endl;
 		return (1);
 	}
-	std::ofstream ofs (filename + ".replace", std::ofstream::out);
+	std::ofstream ofs ((filename + ".replace").c_str(), std::ofstream::out);
 	std::stringstream buffer;
 	buffer << ifs.rdbuf();
 	str = buffer.str();

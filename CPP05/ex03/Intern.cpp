@@ -40,7 +40,7 @@ Intern::~Intern()
 
 Form	*Intern::_createForm(int idx, const string &target) const
 {
-	Form *form(nullptr);
+	Form *form(NULL);
 	switch (idx)
 	{
 		case 0:

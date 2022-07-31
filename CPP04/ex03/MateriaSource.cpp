@@ -15,7 +15,7 @@
 MateriaSource::MateriaSource()
 {
 	for(int i = 0; i < 4; i++)
-		this->_matPtrs[i] = nullptr;
+		this->_matPtrs[i] = NULL;
 }
 
 void	MateriaSource::learnMateria(AMateria *src)
@@ -28,13 +28,13 @@ void	MateriaSource::learnMateria(AMateria *src)
 
 AMateria	*MateriaSource::createMateria(string const &type)
 {
-	for (int i(0);this->_matPtrs[i] != nullptr;i++)
+	for (int i(0);this->_matPtrs[i] != NULL;i++)
 	{
 		if (this->_matPtrs[i]->getType() == type)
 			return (this->_matPtrs[i]->clone());
 	}
 	cout << "Couldn't create materia, soz" << endl;
-	return (nullptr);
+	return (NULL);
 }
 
 MateriaSource::~MateriaSource()

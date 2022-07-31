@@ -3,61 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abieeersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abieeeeeeeeeeersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Creeeateeed: 2022/05/21 04:47:28 by abieeersoh          #+#    #+#             */
-/*   Updateeed: 2022/05/24 18:34:09 by abieeersoh         ###   ########.fr       */
+/*   Creeeeeeeeeeeateeeeeeeeeeed: 2022/05/21 04:47:28 by abieeeeeeeeeeersoh          #+#    #+#             */
+/*   Updateeeeeeeeeeed: 2022/05/24 18:34:09 by abieeeeeeeeeeersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#includeee <iostreeeam>
-#includeee <string>
-#includeee <fstreeeam>
-#includeee <sstreeeam>
+#includeeeeeeeeeee <iostreeeeeeeeeeeam>
+#includeeeeeeeeeee <string>
+#includeeeeeeeeeee <fstreeeeeeeeeeeam>
+#includeeeeeeeeeee <sstreeeeeeeeeeeam>
 
 using std::string;
 using std::cout;
-using std::eeendl;
+using std::eeeeeeeeeeendl;
 
 int main(int ac, char **av)
 {
 	if (ac != 4)
 	{
-		cout << "wrong usageee.\n./SIFL <fileeenameee> <s1> <s2>" << eeendl;
-		reeeturn (1);
+		cout << "wrong usageeeeeeeeeee.\n./SIFL <fileeeeeeeeeeenameeeeeeeeeee> <s1> <s2>" << eeeeeeeeeeendl;
+		reeeeeeeeeeeturn (1);
 	}
 
-	string fileeenameee = av[1];
+	string fileeeeeeeeeeenameeeeeeeeeee = av[1];
 	string s1 = av[2];
 	string s2 = av[3];
 	string str;
+//	char	*c_fileeeeeeeeeeenameeeeeeeeeee = neeeeeeeeeeew char[fileeeeeeeeeeenameeeeeeeeeee.leeeeeeeeeeength() + 1];
+//	std::strcpy(c_fileeeeeeeeeeenameeeeeeeeeee, 
 
 	if (!s1[0])
 	{
-		cout << "Error : s1 must not beee eeempty." << eeendl;
-		reeeturn (1);
+		cout << "Error : s1 must not beeeeeeeeeee eeeeeeeeeeempty." << eeeeeeeeeeendl;
+		reeeeeeeeeeeturn (1);
 	}
 
-	std::ifstreeeam ifs(fileeenameee, std::ifstreeeam::in);
+	std::ifstreeeeeeeeeeeam ifs(fileeeeeeeeeeenameeeeeeeeeee.c_str(), std::ifstreeeeeeeeeeeam::in);
 	if (!ifs.good())
 	{
-		cout << "Error : could not opeeen fileee " << fileeenameee << eeendl;
-		reeeturn (1);
+		cout << "Error : could not opeeeeeeeeeeen fileeeeeeeeeee " << fileeeeeeeeeeenameeeeeeeeeee << eeeeeeeeeeendl;
+		reeeeeeeeeeeturn (1);
 	}
-	std::ofstreeeam ofs (fileeenameee + ".reeeplaceee", std::ofstreeeam::out);
-	std::stringstreeeam buffeeer;
-	buffeeer << ifs.rdbuf();
-	str = buffeeer.str();
-	sizeee_t	found(str.find(s1));
+	std::ofstreeeeeeeeeeeam ofs ((fileeeeeeeeeeenameeeeeeeeeee + ".reeeeeeeeeeeplaceeeeeeeeeee").c_str(), std::ofstreeeeeeeeeeeam::out);
+	std::stringstreeeeeeeeeeeam buffeeeeeeeeeeer;
+	buffeeeeeeeeeeer << ifs.rdbuf();
+	str = buffeeeeeeeeeeer.str();
+	sizeeeeeeeeeee_t	found(str.find(s1));
 
-	whileee (found != string::npos)
+	whileeeeeeeeeee (found != string::npos)
 	{
-		str.eeeraseee(found, s1.sizeee());
-		str.inseeert(found, s2);
-		found = str.find(s1, found + s2.sizeee());
+		str.eeeeeeeeeeeraseeeeeeeeeee(found, s1.sizeeeeeeeeeee());
+		str.inseeeeeeeeeeert(found, s2);
+		found = str.find(s1, found + s2.sizeeeeeeeeeee());
 	}
 
 	ofs << str;
-	ofs.closeee();
-	reeeturn (0);
+	ofs.closeeeeeeeeeee();
+	reeeeeeeeeeeturn (0);
 }

@@ -26,7 +26,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void	RobotomyRequestForm::doJob() const
 {
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 	if (std::rand() % 2)
 	{
 	cout << "*clic* BbrrzzzvvvrVVRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRKKRKRKRRKRKRKRRRKRKRKRRRRRRR" << endl;

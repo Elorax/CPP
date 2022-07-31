@@ -25,7 +25,7 @@ void	ShrubberyCreationForm::doJob() const
 {
 	std::fstream fout;
 
-	fout.open(this->_target + "_shrubbery", std::ios_base::out);
+	fout.open((this->_target + "_shrubbery").c_str(), std::ios_base::out);
 	if (!fout.is_open())
 	{
 		cout << "failed to open " << this->_target << endl;

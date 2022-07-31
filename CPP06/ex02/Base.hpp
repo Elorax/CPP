@@ -2,6 +2,7 @@
 # define BASE_HPP
 # include <iostream>
 # include <string>
+# include <typeinfo>
 # include <cstdlib>
 # include <time.h>
 

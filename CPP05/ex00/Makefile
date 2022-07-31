@@ -6,7 +6,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 CXX	=	c++
 RM	=	rm -rf
 
-CXXFLAGS	=	-Wall -Wextra -Werror
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	Bureaucrats
 

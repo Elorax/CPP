@@ -99,7 +99,7 @@ int main(int ac, char **av)
 	if (isInt(str))
 	{
 //		std::cout << "INTEGER" << std::endl;
-		int nb = std::stoi(str);
+		int nb = atoi(str.c_str());
 		if (nb < std::numeric_limits<char>::min() || nb > std::numeric_limits<char>::max())
 			std::cout << "char : impossible" << std::endl;
 		else if (!isprint(static_cast<char>(nb)))
@@ -125,7 +125,7 @@ int main(int ac, char **av)
 	else if (isFloat(str))
 	{
 //		std::cout << "FLOAT" << std::endl;
-		float f = std::stof(str);
+		float f = atof(str.c_str());
 		if (std::isnan(f) || f < std::numeric_limits<char>::min() || f > std::numeric_limits<char>::max())
 			std::cout << "char : impossible" << std::endl;
 		else if (!isprint(static_cast<char>(f)))
@@ -143,7 +143,7 @@ int main(int ac, char **av)
 	else if (isDouble(str))
 	{
 //		std::cout << "DOUBLE" << std::endl;
-		double d = std::stod(str);
+		double d = atof(str.c_str());
 		if (std::isnan(d) || d < std::numeric_limits<char>::min() || d > std::numeric_limits<char>::max())
 			std::cout << "char : impossible" << std::endl;
 		else if (!isprint(static_cast<char>(d)))
