@@ -21,6 +21,13 @@ int main()
 	delete j;
 	delete i;
 	delete[]	tab;
+
+	Cat	chat1 = Cat();
+	chat1.setIdea("Dormir...", 0);
+	Cat	chat2 = Cat(chat1);
+	chat1.setIdea("Manger !?", 0);
+	cout << chat1.getIdea(0) << chat2.getIdea(0) << endl;
+	
 	return (0);
 
 }
