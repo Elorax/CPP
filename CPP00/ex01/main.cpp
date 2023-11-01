@@ -17,13 +17,25 @@ bool	is_valid_command(string const &cmd)
 	return (cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT");
 }
 
+bool	input_search(string const &str, PhoneBook const &rep)
+{
+	if (str.size() != 1)
+		return (0)
+	if (str[0] < '0' || str[0] >= '0' + rep.getNb²Contacts() % 8)	
+		return (0);
+}
+
 void	searchContact(PhoneBook &rep)
 {
 	int	nb(-1);
-	rep.printContacts();
-	cout << "Enter index of desired contact." << endl;
-	std::cin >> nb;
-	std::cin.ignore();
+	string	str("");
+	while (!input_search(str, rep))
+	{
+		cout << "\x1b[2J\x1b[H";
+		rep.printContacts();
+		cout << "Enter index of desired contact." << endl;
+		std::getline(std::cin, str);
+	}
 	rep.printInfo(nb);
 }
 
