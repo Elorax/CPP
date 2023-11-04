@@ -19,5 +19,5 @@ Zombie	*zombieHorde(int N, std::string name)
 	{
 		Horde[i].set_name(name);
 	}
-	return (&Horde[0]);
+	return (Horde);
 }

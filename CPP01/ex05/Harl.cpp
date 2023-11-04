@@ -45,7 +45,6 @@ typedef	void(Harl::*ptr) ();
 void	Harl::complain(string level)
 {
 	string actions[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-//	void (Harl::*ptrs)()[4] = {
 	ptr ptrs[4] = {
 		&Harl::debug,
 		&Harl::info,
@@ -54,8 +53,6 @@ void	Harl::complain(string level)
 	};
 
 	for (int i = 0; i < 4 ; i++)
-	{
 		if (actions[i] == level)
 			(this->*ptrs[i])();
-	}
 }

@@ -16,11 +16,16 @@ Weapon::Weapon(std::string type) : m_type(type)
 {
 }
 
+Weapon::Weapon(const Weapon& weapon)
+{
+	this->m_type = weapon.getType();
+}
+
 Weapon::~Weapon()
 {
 }
 
-void	Weapon::setType(std::string type)
+void	Weapon::setType(const std::string& type)
 {
 	this->m_type = type;
 }

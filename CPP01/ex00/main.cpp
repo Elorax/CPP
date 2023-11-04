@@ -14,8 +14,8 @@
 
 int main()
 {
-	Zombie	*zombieOnHeap = newZombie("Pepere");
-	Zombie	zombieOnStack("Mam'zelle bisson");
+	Zombie	*zombieOnHeap = newZombie("Zombard");
+	Zombie	zombieOnStack("Zombardeux");
 
 	zombieOnStack.announce();
 	zombieOnHeap->announce();
