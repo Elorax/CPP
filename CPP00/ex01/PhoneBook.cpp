@@ -28,6 +28,14 @@ void	PhoneBook::newContact(string const &firstName, string const &lastName, stri
 	return ;
 }
 
+int	PhoneBook::getNbContacts(void) const
+{
+	if (this->_nbContacts < 8)
+		return (this->_nbContacts);
+	else
+		return (8);
+}
+
 void	PhoneBook::printContacts(void) const
 {
 	cout << "     Index|   F. Name|   L. Name|  Nickname|" << endl;
@@ -61,9 +69,10 @@ void	PhoneBook::printInfo(int nbContact) const
 		cout << "Non existing contact. Please refer to PEBKAC manual" << endl;
 		return ;
 	}
-	cout << "First name : " << this->_contact[nbContact].getFirstName() << endl;
-	cout << "Last name : " << this->_contact[nbContact].getLastName() << endl;
-	cout << "Nickname : " << this->_contact[nbContact].getNickname() << endl;
-	cout << "Phone number : " << this->_contact[nbContact].getPhoneNumber() << endl;
+	cout << "\x1b[2J\x1b[H";
+	cout << "First name     : " << this->_contact[nbContact].getFirstName() << endl;
+	cout << "Last name      : " << this->_contact[nbContact].getLastName() << endl;
+	cout << "Nickname       : " << this->_contact[nbContact].getNickname() << endl;
+	cout << "Phone number   : " << this->_contact[nbContact].getPhoneNumber() << endl;
 	cout << "Darkest secret : " << this->_contact[nbContact].getDarkestSecret() << endl;
 }

@@ -14,20 +14,25 @@
 
 bool	is_valid_command(string const &cmd)
 {
-	return (cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT");
+	if (cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT")
+	{
+		return (1);
+	}
+	cout << "\x1b[2J\x1b[H";
+	return (0);
 }
 
 bool	input_search(string const &str, PhoneBook const &rep)
 {
 	if (str.size() != 1)
-		return (0)
-	if (str[0] < '0' || str[0] >= '0' + rep.getNb²Contacts() % 8)	
 		return (0);
+	if (str[0] < '0' || str[0] >= '0' + rep.getNbContacts())	
+		return (0);
+	return (1);
 }
 
 void	searchContact(PhoneBook &rep)
 {
-	int	nb(-1);
 	string	str("");
 	while (!input_search(str, rep))
 	{
@@ -36,36 +41,59 @@ void	searchContact(PhoneBook &rep)
 		cout << "Enter index of desired contact." << endl;
 		std::getline(std::cin, str);
 	}
-	rep.printInfo(nb);
+	rep.printInfo(str[0] - '0');
+}
+
+bool	containsPrintable(std::string s)
+{
+	for(std::string::iterator it=s.begin(); it!=s.end(); it++)
+		if (!std::isprint(*it))
+			return (1);
+	return (0);
+}
+
+bool	isANumber(std::string s)
+{
+	for(std::string::iterator it=s.begin(); it!=s.end(); it++)
+		if (!std::isdigit(*it) && *it != '+' && *it != ' ')
+			return (0);
+	return (1);
+
 }
 
 void	addContact(PhoneBook &rep)
 {
 	string param[5];
-	while (param[0] == "")
+	while (param[0] == "" || containsPrintable(param[0]))
 	{
+		cout << "\x1b[2J\x1b[H";
 		cout << "Enter contact's first name." << endl;
 		std::getline(std::cin, param[0]);
 	}
-	while (param[1] == "")
+	while (param[1] == "" || containsPrintable(param[1]))
 	{
+		cout << "\x1b[2J\x1b[H";
 		cout << "Enter contact's last name." << endl;
 		std::getline(std::cin, param[1]);
 	}
-	while (param[2] == "")
+	while (param[2] == "" || containsPrintable(param[2]))
 	{
+		cout << "\x1b[2J\x1b[H";
 		cout << "Enter contact's nickname." << endl;
 		std::getline(std::cin, param[2]);
 	}
-	while (param[3] == "")
+	while (param[3] == "" || containsPrintable(param[3]) || !isANumber(param[3]))
 	{
+		cout << "\x1b[2J\x1b[H";
 		cout << "Enter contact's phone number." << endl;
 		std::getline(std::cin, param[3]);
 	}
-	while (param[4] == "")
+	while (param[4] == "" || containsPrintable(param[4]))
 	{
+		cout << "\x1b[2J\x1b[H";
 		cout << "Enter contact's darkest secret." << endl;
 		std::getline(std::cin, param[4]);
+		cout << "\x1b[2J\x1b[H";
 	}
 	rep.newContact(param[0], param[1], param[2], param[3], param[4]);
 }
@@ -83,6 +111,7 @@ int	handle_cmd(string const &cmd, PhoneBook &rep)
 
 void	display_choices(string &cmd)
 {
+	cout << endl << endl << endl;
 	cout << "Please enter one of the following commands" << endl;
 	cout << "\"ADD\" for registera new contact" << endl;
 	cout << "\"SEARCH\" for searching a contact" << endl;

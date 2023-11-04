@@ -28,6 +28,7 @@ class	PhoneBook
 	void	newContact(string const &firstName, string const &lastName, string const &nickname, string const &phoneNumber, string const &darkestSecret);
 	void	printContacts(void) const;
 	void	printInfo(int nbContact) const;
+	int	getNbContacts(void) const;
 
 	private:
 
