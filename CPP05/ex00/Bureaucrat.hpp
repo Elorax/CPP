@@ -35,7 +35,6 @@ class	Bureaucrat
 			{
 				return ("Error : Grade too high !");
 			}
-
 	};
 	class	GradeTooLowException : public std::exception
 	{
@@ -44,7 +43,6 @@ class	Bureaucrat
 			{
 				return ("Error : Grade too low !");
 			}
-
 	};
 
 	string const& getName() const;
@@ -53,7 +51,7 @@ class	Bureaucrat
 	void	downgrade();
 
 	private:
-	string	_name;
+const string	_name;
 	int		_grade;
 };
 

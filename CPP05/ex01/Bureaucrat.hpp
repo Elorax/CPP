@@ -56,7 +56,7 @@ class	Bureaucrat
 	void	signForm(Form &form) const;
 
 	private:
-	string	_name;
+	const string	_name;
 	int		_grade;
 };
 

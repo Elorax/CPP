@@ -30,11 +30,11 @@ class	Intern
 	Intern(const Intern&);
 	Intern	&operator=(const Intern&);
 	~Intern();
-	Form	*makeForm(const string &name, const string &target) const;
+	AForm	*makeForm(const string &name, const string &target) const;
 
 	private:
 	string _names[3];
-	Form	*_createForm(int idx, const string &target) const;
+	AForm	*_createForm(int idx, const string &target) const;
 };
 
 #endif

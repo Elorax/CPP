@@ -12,7 +12,7 @@
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(const string &target): Form("shrubbery creation form", 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const string &target): AForm("shrubbery creation form", 145, 137), _target(target)
 {
 
 }

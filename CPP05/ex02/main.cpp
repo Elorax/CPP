@@ -21,9 +21,9 @@ int main()
 	Bureaucrat	patron("Bob", 1);
 	Bureaucrat	stagiaire("Jack", 150);
 
-	Form	*shrub = new ShrubberyCreationForm("GAAARDEN");
-	Form	*robot = new RobotomyRequestForm("K.R.O.T.E");
-	Form	*sujet = new PresidentialPardonForm("Fchouky");
+	AForm	*shrub = new ShrubberyCreationForm("GAAARDEN");
+	AForm	*robot = new RobotomyRequestForm("K.R.O.T.E");
+	AForm	*sujet = new PresidentialPardonForm("Fchouky");
 
 	try
 	{
@@ -34,6 +34,7 @@ int main()
 		cout << e.what() << endl;
 	}
 
+	cout << endl << endl;
 	try
 	{
 		patron.signForm(*shrub);
@@ -42,6 +43,7 @@ int main()
 	{
 		cout << e.what() << endl;
 	}
+	cout << endl << endl;
 	try
 	{
 		patron.executeForm(*shrub);
@@ -50,6 +52,7 @@ int main()
 	{
 		cout << e.what() << endl;
 	}
+	cout << endl << endl;
 	try
 	{
 		patron.signForm(*robot);
@@ -58,6 +61,7 @@ int main()
 	{
 		cout << e.what() << endl;
 	}
+	cout << endl << endl;
 	try
 	{
 		patron.signForm(*sujet);
@@ -66,6 +70,7 @@ int main()
 	{
 		cout << e.what() << endl;
 	}
+	cout << endl << endl;
 	try
 	{
 		stagiaire.executeForm(*sujet);
@@ -74,10 +79,14 @@ int main()
 	{
 		cout << e.what() << endl;
 	}
+	cout << endl << endl;
 	stagiaire.signForm(*sujet);
+	cout << endl << endl;
 
 	patron.executeForm(*sujet);
+	cout << endl << endl;
 	patron.executeForm(*robot);
+	cout << endl << endl;
 
 	delete shrub;
 	delete robot;

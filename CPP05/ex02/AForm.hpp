@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -20,13 +20,13 @@ using	std::string;
 using	std::cout;
 using	std::endl;
 class	Bureaucrat;
-class	Form
+class	AForm
 {
 	public:
-	Form(const string &name = "random form", int sign = 150, int exec = 150);
-	Form(const Form&);
-	Form	&operator=(const Form&);
-	virtual ~Form();
+	AForm(const string &name = "random form", int sign = 150, int exec = 150);
+	AForm(const AForm&);
+	AForm	&operator=(const AForm&);
+	virtual ~AForm();
 
 	class	GradeTooHighException: public std::exception
 	{
@@ -52,7 +52,7 @@ class	Form
 		public:
 			virtual const char *what() const throw()
 			{
-				return ("Error : Form not signed !");
+				return ("Error : AForm not signed !");
 			}
 		
 	};
@@ -71,9 +71,9 @@ class	Form
 	bool	_isSigned;
 	const int	_signGrade;
 	const int	_execGrade;
-	virtual	void doJob(void) const = 0;
+	virtual	void doJob(void) const = 0;	//Classe abstraite
 };
 
-std::ostream &operator<<(std::ostream &flux, const Form &src);
+std::ostream &operator<<(std::ostream &flux, const AForm &src);
 
 #endif

@@ -38,9 +38,9 @@ Intern::~Intern()
 
 }
 
-Form	*Intern::_createForm(int idx, const string &target) const
+AForm	*Intern::_createForm(int idx, const string &target) const
 {
-	Form *form(NULL);
+	AForm *form(NULL);
 	switch (idx)
 	{
 		case 0:
@@ -58,7 +58,7 @@ Form	*Intern::_createForm(int idx, const string &target) const
 	return form;
 }
 
-Form	*Intern::makeForm(const string &name, const string &target) const
+AForm	*Intern::makeForm(const string &name, const string &target) const
 {
 	int i(0);
 	for (; i < 3; i++)

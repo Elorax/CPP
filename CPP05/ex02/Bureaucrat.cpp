@@ -31,7 +31,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat& toCopy): _name(toCopy._name)
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &toAssign)
 {
-	this->_name = toAssign._name;
 	this->_grade = toAssign._grade;
 	return (*this);
 }
@@ -71,7 +70,7 @@ std::ostream	&operator<<(std::ostream &o, Bureaucrat const &src)
 	return (o);
 }
 
-void	Bureaucrat::signForm(Form &form) const
+void	Bureaucrat::signForm(AForm &form) const
 {
 	if (this->_grade <= form.getSignGrade())
 	{
@@ -82,7 +81,7 @@ void	Bureaucrat::signForm(Form &form) const
 		cout << this->_name << " couldn't sign " << form.getName() << " because grade is too low" << endl;
 }
 
-void	Bureaucrat::executeForm(Form const &form) const
+void	Bureaucrat::executeForm(AForm const &form) const
 {
 	form.execute(*this);
 	cout << this->_name << " executed " << form.getName() << endl;

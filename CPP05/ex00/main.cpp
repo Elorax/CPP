@@ -28,18 +28,19 @@ int main()
 		patron.upgrade();
 		patron.upgrade();
 		cout << patron << endl;
+		cout << "We never reach this part since last upgrade threw an exception" << endl;
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;
+		cout << e.what() << endl;	//printing thrown exception
 	}
 	try
 	{
-	stagiaire.upgrade();
-	cout << stagiaire << endl;
-	stagiaire.downgrade();
-	stagiaire.downgrade();
-	cout << stagiaire << endl;
+		stagiaire.upgrade();
+		cout << stagiaire << endl;
+		stagiaire.downgrade();
+		stagiaire.downgrade();
+		cout << stagiaire << endl;
 	}
 	catch(std::exception &e)
 	{
@@ -62,5 +63,6 @@ int main()
 		cout << e.what() << endl;
 	}
 	cout << patron << endl;
-	cout << stagiaire << endl;
+	stagiaire = patron;
+	cout << stagiaire << endl;	//Copie du grade, mais le stagiaire garde le meme nom !
 }

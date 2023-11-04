@@ -31,7 +31,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat& toCopy): _name(toCopy._name)
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &toAssign)
 {
-	this->_name = toAssign._name;
 	this->_grade = toAssign._grade;
 	return (*this);
 }
@@ -67,6 +66,6 @@ void	Bureaucrat::downgrade()
 
 std::ostream	&operator<<(std::ostream &o, Bureaucrat const &src)
 {
-	o << src.getName() << ", bureaucrat grade " << src.getGrade();
+	o << src.getName() << " is a cog grade " << src.getGrade();
 	return (o);
 }

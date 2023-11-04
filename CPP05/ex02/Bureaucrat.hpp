@@ -15,12 +15,12 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 using	std::string;
 using	std::cout;
 using	std::endl;
-class	Form;
+class	AForm;
 class	Bureaucrat
 {
 	public:
@@ -53,12 +53,12 @@ class	Bureaucrat
 	void	upgrade();
 	void	downgrade();
 
-	void	signForm(Form &form) const;
+	void	signForm(AForm &form) const;
 
-	void	executeForm(Form const &form) const;
+	void	executeForm(AForm const &form) const;
 
 	private:
-	string	_name;
+	const string	_name;
 	int		_grade;
 };
 
