@@ -12,7 +12,7 @@
 
 #include "Point.hpp"
 
-Point::Point(float x, float y): _x(x), _y(y)
+Point::Point(float const x, float const y): _x(x), _y(y)
 {
 }
 

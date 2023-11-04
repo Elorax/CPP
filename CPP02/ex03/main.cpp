@@ -29,5 +29,4 @@ int main()
 	std::cout << bsp(a, b, c, p4) << std::endl;
 	std::cout << bsp(a, b, c, p5) << std::endl;
 	std::cout << bsp(a, b, c, p6) << std::endl;
-
 }
