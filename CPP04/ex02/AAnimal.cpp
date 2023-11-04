@@ -1,29 +1,29 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal(): _type("Animal")
+AAnimal::AAnimal(): _type("Animal")
 {
 	cout << "Animal created !" << endl;
 }
 
-Animal::Animal(const Animal& toCopy)
+AAnimal::AAnimal(const AAnimal& toCopy)
 {
 	cout << "Animal copy constructor called" << endl;
 	this->_type = toCopy._type;
 }
 
 
-Animal	&Animal::operator=(const Animal &toAssign)
+AAnimal	&AAnimal::operator=(const AAnimal &toAssign)
 {
 	this->_type = toAssign._type;
 	return (*this);
 }
 
-string	Animal::getType() const
+string	AAnimal::getType() const
 {
 	return (this->_type);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	cout << "Animal DESTROYED" << endl;
 }

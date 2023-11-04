@@ -2,14 +2,14 @@
 # define CAT_HPP
 # include <iostream>
 # include <string>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 using	std::string;
 using	std::cout;
 using	std::endl;
 
-class	Cat : public Animal
+class	Cat : public AAnimal
 {
 	public:
 	Cat();

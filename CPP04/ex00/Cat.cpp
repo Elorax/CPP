@@ -1,11 +1,11 @@
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat(): Animal()
 {
 	cout << "baby kitty just born omg so cute !!!" << endl;
 	_type = "Cat";
 }
-Cat::Cat(const Cat& toCopy)
+Cat::Cat(const Cat& toCopy): Animal(toCopy)
 {
 	cout << "baby kitty just copied from another baby kitty omg omg" << endl;
 	*this = toCopy;

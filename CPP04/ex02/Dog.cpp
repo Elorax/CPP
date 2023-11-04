@@ -1,14 +1,15 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog(): AAnimal()
 {
 	cout << "A dog has arrived." << endl;
 	brain = new Brain();
 	_type = "Dog";
 }
-Dog::Dog(const Dog& toCopy)
+Dog::Dog(const Dog& toCopy): AAnimal(toCopy)
 {
 	cout << "Dog has just been copied !" << endl;
+	this->brain = NULL;
 	*this = toCopy;
 }
 

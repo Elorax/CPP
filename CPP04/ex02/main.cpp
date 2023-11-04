@@ -4,12 +4,14 @@
 
 int main()
 {
-	const	Animal* j = new Dog();
-	const	Animal* i = new Cat();
+	const	AAnimal* j = new Dog();
+	const	AAnimal* i = new Cat();
+	cout << endl << endl;
 	delete j;
 	delete i;
+	cout << endl << endl;
 
-//	Animal	test;
+//	AAnimal	test;
 //	Impossible to create instance of abstrait class
 	Dog	toutou;
 	Cat	minou;

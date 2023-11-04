@@ -4,30 +4,35 @@
 
 int main()
 {
-	const	Animal* j = new Dog();
-	const	Animal* i = new Cat();
-
-	Animal	*tab = new Animal[6]();
-
-	for (int i = 0; i < 3; i++)
+	/*
 	{
-		tab[i] = Dog();
-	}
-	for (int i = 3; i < 6; i++)
-	{
-		tab[i] = Cat();
-	}
-
-	delete j;
-	delete i;
-	delete[]	tab;
-
-	Cat	chat1 = Cat();
-	chat1.setIdea("Dormir...", 0);
-	Cat	chat2 = Cat(chat1);
-	chat1.setIdea("Manger !?", 0);
-	cout << chat1.getIdea(0) << chat2.getIdea(0) << endl;
+		const	Animal* j = new Dog();
+		const	Animal* i = new Cat();
 	
-	return (0);
-
+		Animal	*tab = new Animal[6]();
+	
+		for (int a = 0; a < 3; a++)
+		{
+			tab[a] = Dog();
+		}
+		for (int a = 3; a < 6; a++)
+		{
+			tab[a] = Cat();
+		}
+	
+		delete j;
+		delete i;
+		delete[]	tab;
+	}*/
+	{
+		Cat	chat1 = Cat();
+		Cat	chat2;
+		chat1.setIdea("Dormir...", 0);
+		chat2.setIdea("Manger...", 0);
+		chat2 = chat1;
+		chat1.setIdea("Jouer...", 0);
+		Cat	chat3 = Cat(chat1);
+		cout << chat1.getIdea(0) << chat2.getIdea(0) << chat3.getIdea(0) << endl;
+	}
+		return (0);
 }

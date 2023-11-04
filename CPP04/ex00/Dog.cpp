@@ -1,11 +1,11 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog(): Animal()
 {
 	cout << "A dog has arrived." << endl;
 	_type = "Dog";
 }
-Dog::Dog(const Dog& toCopy)
+Dog::Dog(const Dog& toCopy): Animal(toCopy)
 {
 	cout << "Dog has just been copied !" << endl;
 	*this = toCopy;
