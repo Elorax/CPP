@@ -22,6 +22,7 @@ using	std::endl;
 class	ClapTrap
 {
 	public:
+	ClapTrap();
 	ClapTrap(string name);
 	ClapTrap(const ClapTrap&);
 	~ClapTrap();

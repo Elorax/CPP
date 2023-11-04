@@ -1,5 +1,14 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(): ClapTrap("Scav_No_Name")
+{
+	this->_hp = 100;
+	this->_ep = 50;
+	this->_ad = 20;
+	this->_guardMode = 0;
+	cout << "ScavTrap " << this->_name << " en fonctioooooon !!!" << endl;
+}
+
 ScavTrap::ScavTrap(string name): ClapTrap(name)
 {
 	this->_hp = 100;
@@ -20,7 +29,11 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::guardGate()
 {
-	cout << "ScavTrap " << this->_name << " entering guard gate mode !" << endl;
+	this->_guardMode = !this->_guardMode;
+	if (this->_guardMode)
+		cout << "ScavTrap " << this->_name << " entering guard gate mode !" << endl;
+	else
+		cout << "ScavTrap " << this->_name << " leaving guard gate mode !" << endl;	
 }
 
 void	ScavTrap::attack(const string &target)

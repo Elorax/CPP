@@ -11,6 +11,7 @@ using	std::endl;
 class	FragTrap : public ClapTrap
 {
 	public:
+	FragTrap();
 	FragTrap(string name = "K.R.O.T.E");
 	FragTrap(const FragTrap&);
 	~FragTrap();

@@ -12,6 +12,11 @@
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(): _name("No_Name"), _hp(10), _ep(10), _ad(10)
+{
+	cout << "Default constructor without name called" << endl;
+}
+
 ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
 	cout << "Default constructor called" << endl;

@@ -2,11 +2,9 @@
 
 DiamondTrap::DiamondTrap(string name): ClapTrap(name)
 {
-	//this->_hp = this->FragTrap::_hp;
 	this->_hp = 100;
 	this->_ep = 50;
 	this->_ad = 30;
-//	this->_ad = this->FragTrap::_ad;
 	this->ClapTrap::_name = name + "_clap_name";
 	cout << "DiamondTrap constructor called" << endl;
 }

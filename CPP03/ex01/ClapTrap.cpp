@@ -12,6 +12,11 @@
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(): _name("No_Name"), _hp(10), _ep(10), _ad(0)
+{
+	cout << "ClapTrap constructor called" << endl;
+}
+
 ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
 	cout << "ClapTrap constructor called" << endl;
@@ -51,6 +56,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	this->_hp -= amount;
 	if (this->_hp < 0)
 		this->_hp = 0;
+	cout << this->_name << " has taken " << amount << " damage !" << endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)

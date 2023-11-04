@@ -5,18 +5,18 @@ SRCS	=		main.cpp	\
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-CXX	=	clang++
+CXX	=	c++
 RM	=	rm -rf
 
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	Fraggy
+NAME	=	fraggy
 
 #%.o: %.cpp
 #		$(CCPP) $(CPPFLAGS) -I -c $< -o $@
 
 $(NAME): $(OBJS)
-		$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all:	$(NAME)
 

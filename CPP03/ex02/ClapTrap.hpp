@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/21 06:18:10 by abiersoh          #+#    #+#             */
+/*   Updated: 2022/05/21 06:34:08 by abiersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 # include <iostream>
@@ -10,7 +22,8 @@ using	std::endl;
 class	ClapTrap
 {
 	public:
-	ClapTrap(string name = "R2D2");
+	ClapTrap();
+	ClapTrap(string name);
 	ClapTrap(const ClapTrap&);
 	~ClapTrap();
 	ClapTrap	&operator=(const ClapTrap&);

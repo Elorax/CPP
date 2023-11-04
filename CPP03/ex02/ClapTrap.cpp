@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/21 06:16:42 by abiersoh          #+#    #+#             */
+/*   Updated: 2022/05/21 06:18:07 by abiersoh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(): _name("No_Name"), _hp(10), _ep(10), _ad(0)
+{
+	cout << "ClapTrap constructor called" << endl;
+}
 
 ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
 	cout << "ClapTrap constructor called" << endl;
-	this->_hp = 10;
-	this->_ep = 10;
-	this->_ad = 0;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &toCopy)
+ClapTrap::ClapTrap(const ClapTrap &toCopy): _name(toCopy._name), _hp(toCopy._hp), _ep(toCopy._ep), _ad(toCopy._ad)
 {
 	cout << "ClapTrap copy constructor called" << endl;
-	this->_name = toCopy._name;
-	this->_hp = toCopy._hp;
-	this->_ep = toCopy._ep;
-	this->_ad = toCopy._ad;
 }
 
 ClapTrap::~ClapTrap()
@@ -46,6 +56,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	this->_hp -= amount;
 	if (this->_hp < 0)
 		this->_hp = 0;
+	cout << this->_name << " has taken " << amount << " damage !" << endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -57,7 +68,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		cout << "ClapTrap " << this->_name << " healed itself for " << amount << " HP !" << endl;
 	}
 	else
-		cout << "ClapTrap " << this->_name << " tried to heal itself but is out of energy !" << endl;
+		cout << "ClapTrap " << this->_name << " can't be healed" << endl;
 }
 
 string	ClapTrap::getName() const

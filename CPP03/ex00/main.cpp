@@ -15,9 +15,9 @@
 
 int main ()
 {
-	ClapTrap	R2D2("Pepere");
+	ClapTrap	R2D2("R2D2");
 	ClapTrap	Fake_R2D2(R2D2);
-	ClapTrap	C3PO("osef");
+	ClapTrap	C3PO("C3PO");
 
 	R2D2.attack("nothing");
 	Fake_R2D2.attack("nothing again");

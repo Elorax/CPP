@@ -22,7 +22,8 @@ using	std::endl;
 class	ClapTrap
 {
 	public:
-	ClapTrap(string name = "R2D2");
+	ClapTrap();
+	ClapTrap(string name);
 	ClapTrap(const ClapTrap&);
 	~ClapTrap();
 	ClapTrap	&operator=(const ClapTrap&);

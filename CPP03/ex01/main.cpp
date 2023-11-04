@@ -9,9 +9,11 @@ int main ()
 
 
 	Pepere.attack("nothing");
-	Pepere_v2.attack("nothing");
+	Pepere_v2.attack("something");
 
 	Contrefacon.guardGate();
+	Pepere_v2.guardGate();
+	Pepere_v2.guardGate();
 	Pepere_v2.guardGate();
 	
 	cout << Pepere_v2;
