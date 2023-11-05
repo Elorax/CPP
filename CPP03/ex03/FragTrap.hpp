@@ -19,7 +19,7 @@
 class	FragTrap : virtual public ClapTrap
 {
 	public:
-	FragTrap(string name = "K.R.O.T.E");
+	FragTrap(std::string name = "K.R.O.T.E");
 	FragTrap(const FragTrap&);
 	~FragTrap();
 	void	highFivesGuys();

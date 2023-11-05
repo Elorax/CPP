@@ -25,8 +25,8 @@ int main ()
 
 	C3PO = R2D2;
 	R2D2.beRepaired(3);
-	cout << C3PO;
-	cout << R2D2;
+	std::cout << C3PO;
+	std::cout << R2D2;
 
 	return (0);
 }

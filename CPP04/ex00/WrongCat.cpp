@@ -2,12 +2,12 @@
 
 WrongCat::WrongCat(): WrongAnimal()
 {
-	cout << "baby kitty just born omg so cute !!!" << endl;
+	std::cout << "baby kitty just born omg so cute !!!" << std::endl;
 	_type = "WrongCat";
 }
 WrongCat::WrongCat(const WrongCat& toCopy): WrongAnimal(toCopy)
 {
-	cout << "baby kitty just copied from another baby kitty omg omg" << endl;
+	std::cout << "baby kitty just copied from another baby kitty omg omg" << std::endl;
 	*this = toCopy;
 }
 /*
@@ -19,11 +19,11 @@ WrongCat	&WrongCat::operator=(const & toAssign)
 
 WrongCat::~WrongCat()
 {
-	cout << "MEAOEJAEAAOOOHZZN!!!" << endl;
+	std::cout << "MEAOEJAEAAOOOHZZN!!!" << std::endl;
 }
 
 void	WrongCat::makeSound()	const
 {
-	cout << "nyanyanyanyanyanyanyan nyanyanyanyanyanyanyan !!" << endl;
-	cout << "*flies with a rainbow in the ass*" << endl;
+	std::cout << "nyanyanyanyanyanyanyan nyanyanyanyanyanyanyan !!" << std::endl;
+	std::cout << "*flies with a rainbow in the ass*" << std::endl;
 }

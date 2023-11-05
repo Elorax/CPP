@@ -2,13 +2,13 @@
 
 Dog::Dog(): AAnimal()
 {
-	cout << "A dog has arrived." << endl;
+	std::cout << "A dog has arrived." << std::endl;
 	brain = new Brain();
 	_type = "Dog";
 }
 Dog::Dog(const Dog& toCopy): AAnimal(toCopy)
 {
-	cout << "Dog has just been copied !" << endl;
+	std::cout << "Dog has just been copied !" << std::endl;
 	this->brain = NULL;
 	*this = toCopy;
 }
@@ -26,19 +26,19 @@ Dog	&Dog::operator=(const Dog &toAssign)
 Dog::~Dog()
 {
 	delete (this->brain);
-	cout << "Dog just bite the dust." << endl;
+	std::cout << "Dog just bite the dust." << std::endl;
 }
 
 void	Dog::makeSound() const
 {
-	cout << "Ggrrrrrr... Wouf !! WOuF !!! WWWOUFF !!!" << endl;
+	std::cout << "Ggrrrrrr... Wouf !! WOuF !!! WWWOUFF !!!" << std::endl;
 }
 
-string	Dog::getIdea(int nb) const
+std::string	Dog::getIdea(int nb) const
 {
 	return (this->brain->getIdea(nb));
 }
-void	Dog::setIdea(string str, int nb)
+void	Dog::setIdea(std::string str, int nb)
 {
 	this->brain->setIdea(str, nb);
 }

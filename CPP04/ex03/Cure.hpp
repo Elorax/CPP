@@ -16,15 +16,12 @@
 # include <string>
 # include "AMateria.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Cure: public AMateria
 {
 	public:
 	Cure();
-	Cure(string const &type);
+	Cure(std::string const &type);
 	Cure(const Cure&);
 	Cure	&operator=(const Cure& toAssign);
 	~Cure();

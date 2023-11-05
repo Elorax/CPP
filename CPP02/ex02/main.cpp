@@ -18,14 +18,14 @@ int main()
 	Fixed	a;
 	Fixed const	b(Fixed(5.05f) * Fixed(2));
 
-	cout << a << endl;
-	cout << ++a << endl;
-	cout << a << endl;
-	cout << a++ << endl;
-	cout << a << endl;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
 
-	cout << b << endl;
+	std::cout << b << std::endl;
 
-	cout << Fixed::max(a, b) << endl;
+	std::cout << Fixed::max(a, b) << std::endl;
 	return (0);
 }

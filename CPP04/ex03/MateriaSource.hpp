@@ -16,10 +16,6 @@
 # include <string>
 # include "IMateriaSource.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	MateriaSource: public IMateriaSource
 {
     public:

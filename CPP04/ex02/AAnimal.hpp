@@ -3,10 +3,6 @@
 # include <iostream>
 # include <string>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	AAnimal
 {
 	public:
@@ -14,12 +10,12 @@ class	AAnimal
 	AAnimal(const AAnimal&);
 	AAnimal	&operator=(const AAnimal&);
 	virtual	~AAnimal();
-	string	getType() const;
+	std::string	getType() const;
 
 	virtual void	makeSound() const = 0;
 
 	protected:
-	string	_type;
+	std::string	_type;
 };
 
 #endif

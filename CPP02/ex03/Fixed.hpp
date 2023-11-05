@@ -16,9 +16,6 @@
 # include <string>
 # include <cmath>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Fixed
 {

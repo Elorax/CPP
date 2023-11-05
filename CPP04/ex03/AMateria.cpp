@@ -12,7 +12,7 @@
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(string const &type): _type(type)
+AMateria::AMateria(std::string const &type): _type(type)
 {
 }
 
@@ -23,12 +23,12 @@ AMateria::~AMateria()
 void	AMateria::use(ICharacter const &target)
 {
 	if (this->_type == "ice")
-		cout << "*shoots an ice bolt at " << target.getName() << " *" << endl;
+		std::cout << "*shoots an ice bolt at " << target.getName() << " *" << std::endl;
 	else if (this->_type == "cure")
-		cout << "*heals " << target.getName() << "'s wounds *" << endl;
+		std::cout << "*heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
-string const &AMateria::getType() const
+std::string const &AMateria::getType() const
 {
 	return (this->_type);
 }

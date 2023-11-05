@@ -15,24 +15,21 @@
 # include <iostream>
 # include <string>
 # include "ICharacter.hpp"
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	ICharacter;
 class	AMateria
 {
 	protected:
-	string	_type;
+	std::string	_type;
 
 
 
 	public:
-	AMateria(string const &type);
+	AMateria(std::string const &type);
 	AMateria();
 	virtual ~AMateria();
 
-	string const &getType() const;	//returns materia type
+	std::string const &getType() const;	//returns materia type
 
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter const &target);

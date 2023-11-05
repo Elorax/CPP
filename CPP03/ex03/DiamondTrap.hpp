@@ -5,14 +5,10 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	DiamondTrap: public FragTrap, public ScavTrap
 {
 	public:
-	DiamondTrap(string name = "Shine Bright like a");
+	DiamondTrap(std::string name = "Shine Bright like a");
 	DiamondTrap(const DiamondTrap& toCopy);
 	~DiamondTrap();
 
@@ -22,7 +18,7 @@ class	DiamondTrap: public FragTrap, public ScavTrap
 	using	ScavTrap::attack;
 
 	private:
-	string	_name;
+	std::string	_name;
 };
 
 #endif

@@ -14,11 +14,7 @@
 # define FIXED_HPP
 # include <iostream>
 # include <string>
-//# include ".hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Fixed
 {

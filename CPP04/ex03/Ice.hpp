@@ -16,10 +16,6 @@
 # include <string>
 # include "AMateria.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	Ice: public AMateria
 {
 	public:

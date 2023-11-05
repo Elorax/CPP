@@ -32,7 +32,7 @@ int main()
 		chat2 = chat1;
 		chat1.setIdea("Jouer...", 0);
 		Cat	chat3 = Cat(chat1);
-		cout << chat1.getIdea(0) << chat2.getIdea(0) << chat3.getIdea(0) << endl;
+		std::cout << chat1.getIdea(0) << chat2.getIdea(0) << chat3.getIdea(0) << std::endl;
 	}
 		return (0);
 }

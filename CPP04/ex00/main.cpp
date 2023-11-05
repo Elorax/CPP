@@ -13,8 +13,8 @@ int main()
 	const	Animal* j = new Dog();
 	const	Animal* i = new Cat();
 
-	cout << j->getType() << " " << endl;
-	cout << i->getType() << " " << endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
 	i->makeSound();	//cat sound
 	j->makeSound(); //Dog sound
 	meta->makeSound(); //Animal sound

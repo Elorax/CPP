@@ -4,10 +4,6 @@
 # include <string>
 # include "WrongAnimal.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	WrongCat : public WrongAnimal
 {
 	public:

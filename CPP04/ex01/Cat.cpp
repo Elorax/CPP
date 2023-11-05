@@ -2,13 +2,13 @@
 
 Cat::Cat(): Animal()
 {
-	cout << "baby kitty just born omg so cute !!!" << endl;
+	std::cout << "baby kitty just born omg so cute !!!" << std::endl;
 	brain = new Brain();
 	_type = "Cat";
 }
 Cat::Cat(const Cat& toCopy): Animal(toCopy)
 {
-	cout << "baby kitty just copied from another baby kitty omg omg" << endl;
+	std::cout << "baby kitty just copied from another baby kitty omg omg" << std::endl;
 	this->brain = NULL;
 	*this = toCopy;
 }
@@ -26,20 +26,20 @@ Cat	&Cat::operator=(const Cat &toAssign)
 Cat::~Cat()
 {
 	delete (this->brain);
-	cout << "MEAOEJAEAAOOOHZZN!!!" << endl;
+	std::cout << "MEAOEJAEAAOOOHZZN!!!" << std::endl;
 }
 
 void	Cat::makeSound() const
 {
-	cout << "nyanyanyanyanyanyanyan nyanyanyanyanyanyanyan !!" << endl;
-	cout << "*flies with a rainbow in the %#$*" << endl;
+	std::cout << "nyanyanyanyanyanyanyan nyanyanyanyanyanyanyan !!" << std::endl;
+	std::cout << "*flies with a rainbow in the %#$*" << std::endl;
 }
 
-string	Cat::getIdea(int nb) const
+std::string	Cat::getIdea(int nb) const
 {
 	return (this->brain->getIdea(nb));
 }
-void	Cat::setIdea(string str, int nb)
+void	Cat::setIdea(std::string str, int nb)
 {
 	this->brain->setIdea(str, nb);
 }

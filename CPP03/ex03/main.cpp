@@ -5,7 +5,7 @@ int main()
 	{
 		DiamondTrap rihanna("rihanna");
 		rihanna.attack("a bad person");
-		cout << rihanna;
+		std::cout << rihanna;
 	}
 /*		rihanna.takeDamage(6);
 		rihanna.beRepaired(4);
@@ -16,7 +16,7 @@ int main()
 		rihanna.beRepaired(8);
 		rihanna.takeDamage(17);
 	}
-	std::cout << "----------------------------------------" << std::endl;
+	std::std::cout << "----------------------------------------" << std::std::endl;
 	{
 		FragTrap crazyFrag("crazyFrag");
 		crazyFrag.attack("Handsome Jack");
@@ -27,7 +27,7 @@ int main()
 		crazyFrag.beRepaired(8);
 		crazyFrag.takeDamage(17);
 	}
-	std::cout << "----------------------------------------" << std::endl;
+	std::std::cout << "----------------------------------------" << std::std::endl;
 	{
 		ScavTrap Scavy("Scavy");
 		Scavy.attack("Handsome Jack");
@@ -38,7 +38,7 @@ int main()
 		Scavy.beRepaired(8);
 		Scavy.takeDamage(17);
 	}
-	std::cout << "----------------------------------------" << std::endl;
+	std::std::cout << "----------------------------------------" << std::std::endl;
 	{
 		ClapTrap Clappy("Clappy");
 		Clappy.attack("Handsome Jack");

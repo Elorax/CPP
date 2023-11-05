@@ -2,21 +2,21 @@
 
 Brain::Brain()
 {
-	cout << "Brain default constructor" << endl;
+	std::cout << "Brain default constructor" << std::endl;
 	for(int i = 0; i < 100; i++)
 		ideas[i] = "";
 
 }
 Brain::Brain(const Brain& toCopy)
 {
-	cout << "Brain copy constructor" << endl;
+	std::cout << "Brain copy constructor" << std::endl;
 	for(int i = 0; i < 100 ; i++)
 		ideas[i] = toCopy.ideas[i];
 }
 
 Brain	&Brain::operator=(const Brain &toAssign)
 {
-	cout << "Brain assign constructor" << endl;
+	std::cout << "Brain assign constructor" << std::endl;
 	for(int i = 0; i < 100 ; i++)
 		this->ideas[i] = toAssign.ideas[i];
 	return (*this);
@@ -24,15 +24,15 @@ Brain	&Brain::operator=(const Brain &toAssign)
 
 Brain::~Brain()
 {
-	cout << "Brain deleted" << endl;
+	std::cout << "Brain deleted" << std::endl;
 }
 
-void	Brain::setIdea(string str, int nb)
+void	Brain::setIdea(std::string str, int nb)
 {
 	this->ideas[nb] = str;
 }
 
-string	Brain::getIdea(int nb) const
+std::string	Brain::getIdea(int nb) const
 {
 	return(this->ideas[nb]);
 }

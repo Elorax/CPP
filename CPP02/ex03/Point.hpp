@@ -16,10 +16,6 @@
 # include <string>
 # include "Fixed.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	Point
 {
 	public:

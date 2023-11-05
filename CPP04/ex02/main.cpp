@@ -6,10 +6,10 @@ int main()
 {
 	const	AAnimal* j = new Dog();
 	const	AAnimal* i = new Cat();
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	delete j;
 	delete i;
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 
 //	AAnimal	test;
 //	Impossible to create instance of abstrait class

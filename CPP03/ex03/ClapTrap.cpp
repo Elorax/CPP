@@ -12,14 +12,14 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
-	cout << "ClapTrap constructor called" << endl;
+	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &toCopy)
 {
-	cout << "ClapTrap copy constructor called" << endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	this->_name = toCopy._name;
 	this->_hp = toCopy._hp;
 	this->_ep = toCopy._ep;
@@ -28,12 +28,12 @@ ClapTrap::ClapTrap(const ClapTrap &toCopy)
 
 ClapTrap::~ClapTrap()
 {
-	cout << "ClapTrap " << this->_name << " has been destroyed" << endl;
+	std::cout << "ClapTrap " << this->_name << " has been destroyed" << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap& toCopy)
 {
-	cout << "ClapTrap Assignment operator called" << endl;
+	std::cout << "ClapTrap Assignment operator called" << std::endl;
 	this->_name = toCopy.getName();
 	this->_hp = toCopy.getHP();
 	this->_ep = toCopy.getEP();
@@ -41,12 +41,12 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap& toCopy)
 	return (*this);
 }
 
-void	ClapTrap::attack(const string &target)
+void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_hp > 0 && this->_ep > 0)
 	{
 		this->_ep--;
-		cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << endl;
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
 	}
 }
 
@@ -63,13 +63,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_ep--;
 		this->_hp += amount;
-		cout << "ClapTrap " << this->_name << " healed itself for " << amount << " HP !" << endl;
+		std::cout << "ClapTrap " << this->_name << " healed itself for " << amount << " HP !" << std::endl;
 	}
 	else
-		cout << "ClapTrap " << this->_name << " tried to heal itself but is out of energy !" << endl;
+		std::cout << "ClapTrap " << this->_name << " tried to heal itself but is out of energy !" << std::endl;
 }
 
-string	ClapTrap::getName() const
+std::string	ClapTrap::getName() const
 {
 	return (this->_name);
 }
@@ -89,6 +89,6 @@ int	ClapTrap::getAD() const
 
 std::ostream	&operator<<(std::ostream &flux, ClapTrap const& clappy)
 {
-	flux << clappy.getName() << " has " << clappy.getHP() << " HP, " << clappy.getEP() << " EP, and " << clappy.getAD() << " AD." << endl;
+	flux << clappy.getName() << " has " << clappy.getHP() << " HP, " << clappy.getEP() << " EP, and " << clappy.getAD() << " AD." << std::endl;
 	return (flux);
 }

@@ -2,12 +2,12 @@
 
 Animal::Animal(): _type("Animal")
 {
-	cout << "Animal created !" << endl;
+	std::cout << "Animal created !" << std::endl;
 }
 
 Animal::Animal(const Animal& toCopy)
 {
-	cout << "Animal copy constructor called" << endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = toCopy;
 }
 
@@ -17,17 +17,17 @@ Animal	&Animal::operator=(const Animal &toAssign)
 	return (*this);
 }
 
-string	Animal::getType() const
+std::string	Animal::getType() const
 {
 	return (this->_type);
 }
 
 Animal::~Animal()
 {
-	cout << "Animal DESTROYED" << endl;
+	std::cout << "Animal DESTROYED" << std::endl;
 }
 
 void	Animal::makeSound() const
 {
-	cout << "*makes some strange sounds*" << endl;
+	std::cout << "*makes some strange sounds*" << std::endl;
 }

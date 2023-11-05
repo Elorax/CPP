@@ -2,12 +2,12 @@
 
 Dog::Dog(): Animal()
 {
-	cout << "A dog has arrived." << endl;
+	std::cout << "A dog has arrived." << std::endl;
 	_type = "Dog";
 }
 Dog::Dog(const Dog& toCopy): Animal(toCopy)
 {
-	cout << "Dog has just been copied !" << endl;
+	std::cout << "Dog has just been copied !" << std::endl;
 	*this = toCopy;
 }
 /*
@@ -20,10 +20,10 @@ Dog	&Dog::operator=(const & toAssign)
 
 Dog::~Dog()
 {
-	cout << "Dog just bite the dust." << endl;
+	std::cout << "Dog just bite the dust." << std::endl;
 }
 
 void	Dog::makeSound() const
 {
-	cout << "Ggrrrrrr... Wouf !! WOuF !!! WWWOUFF !!!" << endl;
+	std::cout << "Ggrrrrrr... Wouf !! WOuF !!! WWWOUFF !!!" << std::endl;
 }

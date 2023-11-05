@@ -26,14 +26,14 @@ void	MateriaSource::learnMateria(AMateria *src)
 	this->_matPtrs[i] = src;	
 }
 
-AMateria	*MateriaSource::createMateria(string const &type)
+AMateria	*MateriaSource::createMateria(std::string const &type)
 {
 	for (int i(0);this->_matPtrs[i] != NULL;i++)
 	{
 		if (this->_matPtrs[i]->getType() == type)
 			return (this->_matPtrs[i]->clone());
 	}
-	cout << "Couldn't create materia, soz" << endl;
+	std::cout << "Couldn't create materia, soz" << std::endl;
 	return (NULL);
 }
 

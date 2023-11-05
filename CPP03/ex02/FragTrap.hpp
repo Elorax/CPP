@@ -4,15 +4,11 @@
 # include <string>
 # include "ClapTrap.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	FragTrap : public ClapTrap
 {
 	public:
 	FragTrap();
-	FragTrap(string name = "K.R.O.T.E");
+	FragTrap(std::string name = "K.R.O.T.E");
 	FragTrap(const FragTrap&);
 	~FragTrap();
 	void	highFivesGuys();

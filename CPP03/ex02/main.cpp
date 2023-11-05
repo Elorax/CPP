@@ -7,6 +7,6 @@ int main ()
 	FragTrap	ft("K.R.0.T.E");
 
 	ft.highFivesGuys();
-	cout << ft;
+	std::cout << ft;
 	return (0);
 }

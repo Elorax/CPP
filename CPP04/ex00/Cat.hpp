@@ -4,9 +4,6 @@
 # include <string>
 # include "Animal.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Cat : public Animal
 {

@@ -15,30 +15,26 @@
 # include <iostream>
 # include <string>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	ClapTrap
 {
 	public:
-	ClapTrap(string name = "R2D2");
+	ClapTrap(std::string name = "R2D2");
 	ClapTrap(const ClapTrap&);
 	~ClapTrap();
 	ClapTrap	&operator=(const ClapTrap&);
 
-	void	attack(const string &target);
+	void	attack(const std::string &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
-	string	getName() const;
+	std::string	getName() const;
 	int		getHP() const;
 	int		getEP() const;
 	int		getAD() const;
 
 	protected:
 
-	string	_name;
+	std::string	_name;
 	int	_hp;
 	int	_ep;
 	int	_ad;

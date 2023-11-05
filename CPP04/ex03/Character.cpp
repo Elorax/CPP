@@ -12,7 +12,7 @@
 
 #include "Character.hpp"
 
-Character::Character(const string &name): _name(name)
+Character::Character(const std::string &name): _name(name)
 {
 	this->_matPtrs[0] = NULL;
 	this->_matPtrs[1] = NULL;
@@ -53,7 +53,7 @@ Character::~Character()
 }
 
 
-string const& Character::getName() const
+std::string const& Character::getName() const
 {
 	return (this->_name);
 }
@@ -78,7 +78,7 @@ void Character::use(int idx, ICharacter &target)
 {
 	if (!this->_matPtrs[idx])
 		{
-			cout << this->_name << " can't use the materia because slot " << idx << " is empty !" << endl;
+			std::cout << this->_name << " can't use the materia because slot " << idx << " is empty !" << std::endl;
 			return ;
 		}
 	this->_matPtrs[idx]->use(target);

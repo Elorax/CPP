@@ -14,27 +14,27 @@
 
 ClapTrap::ClapTrap(): _name("No_Name"), _hp(10), _ep(10), _ad(10)
 {
-	cout << "Default constructor without name called" << endl;
+	std::cout << "Default constructor without name called" << std::endl;
 }
 
-ClapTrap::ClapTrap(string name): _name(name), _hp(10), _ep(10), _ad(0)
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _ep(10), _ad(0)
 {
-	cout << "Default constructor called" << endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &toCopy): _name(toCopy._name), _hp(toCopy._hp), _ep(toCopy._ep), _ad(toCopy._ad)
 {
-	cout << "Copy constructor called" << endl;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	cout << this->_name << " has been destroyed" << endl;
+	std::cout << this->_name << " has been destroyed" << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap& toCopy)
 {
-	cout << "Assignment operator called" << endl;
+	std::cout << "Assignment operator called" << std::endl;
 	this->_name = toCopy.getName();
 	this->_hp = toCopy.getHP();
 	this->_ep = toCopy.getEP();
@@ -42,12 +42,12 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap& toCopy)
 	return (*this);
 }
 
-void	ClapTrap::attack(const string &target)
+void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_hp > 0 && this->_ep > 0)
 	{
 		this->_ep--;
-		cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << endl;
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
 	}
 }
 
@@ -64,13 +64,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_ep--;
 		this->_hp += amount;
-		cout << "ClapTrap " << this->_name << " healed itself for " << amount << " HP !" << endl;
+		std::cout << "ClapTrap " << this->_name << " healed itself for " << amount << " HP !" << std::endl;
 	}
 	else
-		cout << "ClapTrap " << this->_name << " can't be healed" << endl;
+		std::cout << "ClapTrap " << this->_name << " can't be healed" << std::endl;
 }
 
-string	ClapTrap::getName() const
+std::string	ClapTrap::getName() const
 {
 	return (this->_name);
 }
@@ -90,6 +90,6 @@ int	ClapTrap::getAD() const
 
 std::ostream	&operator<<(std::ostream &flux, ClapTrap const& clappy)
 {
-	flux << clappy.getName() << " has " << clappy.getHP() << " HP, " << clappy.getEP() << " EP, and " << clappy.getAD() << " AD." << endl;
+	flux << clappy.getName() << " has " << clappy.getHP() << " HP, " << clappy.getEP() << " EP, and " << clappy.getAD() << " AD." << std::endl;
 	return (flux);
 }

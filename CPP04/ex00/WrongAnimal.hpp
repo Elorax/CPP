@@ -3,10 +3,6 @@
 # include <iostream>
 # include <string>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	WrongAnimal
 {
 	public:
@@ -15,12 +11,12 @@ class	WrongAnimal
 	WrongAnimal	&operator=(const WrongAnimal&);
 	~WrongAnimal();
 
-	string	getType() const;
+	std::string	getType() const;
 
 	void	makeSound() const;
 
 	protected:
-	string	_type;
+	std::string	_type;
 };
 
 #endif
