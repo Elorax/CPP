@@ -17,11 +17,11 @@
 class	ShrubberyCreationForm : public AForm
 {
 	public:
-	ShrubberyCreationForm(const string &target = "garden");
+	ShrubberyCreationForm(const std::string &target = "garden");
 	~ShrubberyCreationForm();
 
 	private:
 	void	doJob(void) const;
-	string	_target;
+	std::string	_target;
 };
 #endif

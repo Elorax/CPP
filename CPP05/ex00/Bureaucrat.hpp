@@ -16,14 +16,10 @@
 # include <string>
 # include <stdexcept>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	Bureaucrat
 {
 	public:
-	Bureaucrat(const string &name = "bob", int grade = 150);
+	Bureaucrat(const std::string &name = "bob", int grade = 150);
 	Bureaucrat(const Bureaucrat&);
 	Bureaucrat	&operator=(const Bureaucrat&);
 	~Bureaucrat();
@@ -45,13 +41,14 @@ class	Bureaucrat
 			}
 	};
 
-	string const& getName() const;
+	std::string const& getName() const;
 	int	getGrade() const;
 	void	upgrade();
 	void	downgrade();
 
 	private:
-const string	_name;
+
+	const std::string	_name;
 	int		_grade;
 };
 

@@ -12,7 +12,7 @@
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(const string &target): AForm("shrubbery creation form", 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): AForm("shrubbery creation form", 145, 137), _target(target)
 {
 
 }
@@ -28,22 +28,22 @@ void	ShrubberyCreationForm::doJob() const
 	fout.open((this->_target + "_shrubbery").c_str(), std::ios_base::out);
 	if (!fout.is_open())
 	{
-		cout << "failed to open " << this->_target << endl;
+		std::cout << "failed to open " << this->_target << std::endl;
 	}
 	else
 	{
-		fout << "              v .   ._, |_  .," << endl;
-		fout << "           `-._\\/  .  \\ /    |/_" << endl;
-		fout << "               \\  _\\, y | \\//" << endl;
-		fout << "         _\\_.___\\\\, \\\\/ -.\\||" << endl;
-		fout << "           `7-,--.`._||  / / ," << endl;
-		fout << "           /'     `-. `./ / |/_.' " << endl;
-		fout << "                     |    |// " << endl;
-		fout << "                     |_    / " << endl;
-		fout << "                     |-   | " << endl;
-		fout << "                     |   =| " << endl;
-		fout << "                     |    | " << endl;
-		fout << "--------------------/ ,  . \\--------._ " << endl;
+		fout << "              v .   ._, |_  .," << std::endl;
+		fout << "           `-._\\/  .  \\ /    |/_" << std::endl;
+		fout << "               \\  _\\, y | \\//" << std::endl;
+		fout << "         _\\_.___\\\\, \\\\/ -.\\||" << std::endl;
+		fout << "           `7-,--.`._||  / / ," << std::endl;
+		fout << "           /'     `-. `./ / |/_.' " << std::endl;
+		fout << "                     |    |// " << std::endl;
+		fout << "                     |_    / " << std::endl;
+		fout << "                     |-   | " << std::endl;
+		fout << "                     |   =| " << std::endl;
+		fout << "                     |    | " << std::endl;
+		fout << "--------------------/ ,  . \\--------._ " << std::endl;
 		fout.close();
 	}
 }

@@ -31,62 +31,62 @@ int main()
 	}
 	catch (const std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
 
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	try
 	{
 		patron.signForm(*shrub);
 	}
 	catch(const std::exception& e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	try
 	{
 		patron.executeForm(*shrub);
 	}
 	catch(const std::exception& e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	try
 	{
 		patron.signForm(*robot);
 	}
 	catch (const std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	try
 	{
 		patron.signForm(*sujet);
 	}
 	catch (const std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	try
 	{
 		stagiaire.executeForm(*sujet);
 	}
 	catch (const std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	stagiaire.signForm(*sujet);
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 
 	patron.executeForm(*sujet);
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 	patron.executeForm(*robot);
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 
 	delete shrub;
 	delete robot;

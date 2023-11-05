@@ -38,7 +38,7 @@ Intern::~Intern()
 
 }
 
-AForm	*Intern::_createForm(int idx, const string &target) const
+AForm	*Intern::_createForm(int idx, const std::string &target) const
 {
 	AForm *form(NULL);
 	switch (idx)
@@ -53,12 +53,12 @@ AForm	*Intern::_createForm(int idx, const string &target) const
 			form = new PresidentialPardonForm(target);
 			break;
 		default:
-			cout << "This form doesn't exist, soz" << endl;
+			std::cout << "This form doesn't exist, soz" << std::endl;
 	}
 	return form;
 }
 
-AForm	*Intern::makeForm(const string &name, const string &target) const
+AForm	*Intern::makeForm(const std::string &name, const std::string &target) const
 {
 	int i(0);
 	for (; i < 3; i++)

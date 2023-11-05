@@ -26,28 +26,28 @@ int main()
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl; //Exception form: grade too high
+		std::cout << e.what() << std::endl; //Exception form: grade too high
 	}
-	cout << form1 << endl;
+	std::cout << form1 << std::endl;
 	patron.downgrade();
 	patron.signForm(form1);
-	cout << form1 << endl;
+	std::cout << form1 << std::endl;
 	patron.upgrade();
 	patron.signForm(form1);
-	cout << form1 << endl;
-	cout << form150 << endl;
+	std::cout << form1 << std::endl;
+	std::cout << form150 << std::endl;
 	stagiaire.signForm(form150);
-	cout << form150 << endl;
+	std::cout << form150 << std::endl;
 	try
 	{
 		Form	form50("Laisser passer A38", 50, 50);
-		cout << form50 << endl;
+		std::cout << form50 << std::endl;
 		form50.beSigned(stagiaire);	//remplacer stagiaire par patron pour pas throw d'exception
-		cout << form50 << endl;
+		std::cout << form50 << std::endl;
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;	//exception form : grade too low !
+		std::cout << e.what() << std::endl;	//exception form : grade too low !
 	}
 	//Ajouter un ex de throw d'exception pour Form grade too low
 }

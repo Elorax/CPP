@@ -17,12 +17,12 @@
 class	PresidentialPardonForm : public AForm
 {
 	public:
-	PresidentialPardonForm(const string &target = "a random");
+	PresidentialPardonForm(const std::string &target = "a random");
 	~PresidentialPardonForm();
 
 	private:
 	void	doJob(void) const;
-	string	_target;
+	std::string	_target;
 };
 
 #endif

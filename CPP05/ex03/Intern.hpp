@@ -18,10 +18,6 @@
 # include "PresidentialPardonForm.hpp"
 # include "ShrubberyCreationForm.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	Intern
 {
 	public:
@@ -30,11 +26,11 @@ class	Intern
 	Intern(const Intern&);
 	Intern	&operator=(const Intern&);
 	~Intern();
-	AForm	*makeForm(const string &name, const string &target) const;
+	AForm	*makeForm(const std::string &name, const std::string &target) const;
 
 	private:
-	string _names[3];
-	AForm	*_createForm(int idx, const string &target) const;
+	std::string _names[3];
+	AForm	*_createForm(int idx, const std::string &target) const;
 };
 
 #endif

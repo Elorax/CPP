@@ -12,7 +12,7 @@
 
 #include "Form.hpp"
 
-Form::Form(const string &name, int sign, int exec): _name(name), _isSigned(false), _signGrade(sign), _execGrade(exec)
+Form::Form(const std::string &name, int sign, int exec): _name(name), _isSigned(false), _signGrade(sign), _execGrade(exec)
 {
 	if (sign < 1 || exec < 1)
 		throw Form::GradeTooHighException();
@@ -40,7 +40,7 @@ Form::~Form()
 }
 
 
-const string	&Form::getName() const
+const std::string	&Form::getName() const
 {
 	return (this->_name);
 }
@@ -73,8 +73,8 @@ std::ostream &operator<<(std::ostream &o, const Form &form)
 {
 	o << "Form " << form.getName() << ", can be signed by rank " << form.getSignGrade() << " or more and executed by rank " << form.getExecGrade() << " or more, ";
 	if (form.isSigned())
-		o << "signed" << endl;
+		o << "signed" << std::endl;
 	else
-		o << "not signed" << endl;
+		o << "not signed" << std::endl;
 	return (o);
 }

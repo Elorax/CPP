@@ -17,12 +17,12 @@
 class	RobotomyRequestForm : public AForm
 {
 	public:
-	RobotomyRequestForm(const string &target = "test.txt");
+	RobotomyRequestForm(const std::string &target = "test.txt");
 	~RobotomyRequestForm();
 
 	private:
 	void	doJob(void) const;
-	string	_target;
+	std::string	_target;
 };
 
 #endif

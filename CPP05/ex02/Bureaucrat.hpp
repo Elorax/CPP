@@ -17,14 +17,11 @@
 # include <stdexcept>
 # include "AForm.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 class	AForm;
 class	Bureaucrat
 {
 	public:
-	Bureaucrat(const string &name = "bob", int grade = 150);
+	Bureaucrat(const std::string &name = "bob", int grade = 150);
 	Bureaucrat(const Bureaucrat&);
 	Bureaucrat	&operator=(const Bureaucrat&);
 	~Bureaucrat();
@@ -48,7 +45,7 @@ class	Bureaucrat
 
 	};
 
-	string const& getName() const;
+	std::string const& getName() const;
 	int	getGrade() const;
 	void	upgrade();
 	void	downgrade();
@@ -58,7 +55,7 @@ class	Bureaucrat
 	void	executeForm(AForm const &form) const;
 
 	private:
-	const string	_name;
+	const std::string	_name;
 	int		_grade;
 };
 

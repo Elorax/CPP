@@ -12,7 +12,7 @@
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const string &name, int grade): _name(name)
+Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name)
 {
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
@@ -40,7 +40,7 @@ Bureaucrat::~Bureaucrat()
 
 }
 
-string	const&	Bureaucrat::getName() const
+std::string	const&	Bureaucrat::getName() const
 {
 	return (this->_name);
 }

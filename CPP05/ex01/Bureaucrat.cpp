@@ -12,7 +12,7 @@
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const string &name, int grade): _name(name)
+Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name)
 {
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
@@ -40,7 +40,7 @@ Bureaucrat::~Bureaucrat()
 
 }
 
-string	const&	Bureaucrat::getName() const
+std::string	const&	Bureaucrat::getName() const
 {
 	return (this->_name);
 }
@@ -75,9 +75,9 @@ void	Bureaucrat::signForm(Form &form) const
 	if (this->_grade <= form.getSignGrade())
 	{
 		form.beSigned(*this);
-		cout << this->_name << " signed " << form.getName() << endl;
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
 	}
 	else
-		cout << this->_name << " couldn't sign " << form.getName() << " because grade is too low" << endl;
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because grade is too low" << std::endl;
 }
 

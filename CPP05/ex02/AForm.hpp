@@ -16,14 +16,11 @@
 # include <string>
 # include "Bureaucrat.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 class	Bureaucrat;
 class	AForm
 {
 	public:
-	AForm(const string &name = "random form", int sign = 150, int exec = 150);
+	AForm(const std::string &name = "random form", int sign = 150, int exec = 150);
 	AForm(const AForm&);
 	AForm	&operator=(const AForm&);
 	virtual ~AForm();
@@ -57,7 +54,7 @@ class	AForm
 		
 	};
 
-	const string &getName() const;
+	const std::string &getName() const;
 	bool isSigned() const;
 	int	getSignGrade() const;
 	int getExecGrade() const;
@@ -67,7 +64,7 @@ class	AForm
 
 
 	private:
-	const string	_name;
+	const std::string	_name;
 	bool	_isSigned;
 	const int	_signGrade;
 	const int	_execGrade;

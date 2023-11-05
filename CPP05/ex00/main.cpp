@@ -19,32 +19,32 @@ int main()
 	Bureaucrat	patron("Bob", 1);
 	Bureaucrat	stagiaire("Jack", 150);
 
-	cout << patron << endl << stagiaire << endl;
+	std::cout << patron << std::endl << stagiaire << std::endl;
 
 	try
 	{
 		patron.downgrade();
-		cout << patron << endl;
+		std::cout << patron << std::endl;
 		patron.upgrade();
 		patron.upgrade();
-		cout << patron << endl;
-		cout << "We never reach this part since last upgrade threw an exception" << endl;
+		std::cout << patron << std::endl;
+		std::cout << "We never reach this part since last upgrade threw an exception" << std::endl;
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;	//printing thrown exception
+		std::cout << e.what() << std::endl;	//printing thrown exception
 	}
 	try
 	{
 		stagiaire.upgrade();
-		cout << stagiaire << endl;
+		std::cout << stagiaire << std::endl;
 		stagiaire.downgrade();
 		stagiaire.downgrade();
-		cout << stagiaire << endl;
+		std::cout << stagiaire << std::endl;
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
 	try
 	{
@@ -52,7 +52,7 @@ int main()
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
 	try
 	{
@@ -60,9 +60,9 @@ int main()
 	}
 	catch(std::exception &e)
 	{
-		cout << e.what() << endl;
+		std::cout << e.what() << std::endl;
 	}
-	cout << patron << endl;
+	std::cout << patron << std::endl;
 	stagiaire = patron;
-	cout << stagiaire << endl;	//Copie du grade, mais le stagiaire garde le meme nom !
+	std::cout << stagiaire << std::endl;	//Copie du grade, mais le stagiaire garde le meme nom !
 }

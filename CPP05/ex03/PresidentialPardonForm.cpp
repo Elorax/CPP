@@ -12,7 +12,7 @@
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(const string &target): AForm("Presidential Pardon Form", 25, 5), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("Presidential Pardon Form", 25, 5), _target(target)
 {
 
 }
@@ -23,5 +23,5 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void	PresidentialPardonForm::doJob() const
 {
-	cout << this->_target << " has been forgiven by Zaphod Beeblebrox." << endl;
+	std::cout << this->_target << " has been forgiven by Zaphod Beeblebrox." << std::endl;
 }

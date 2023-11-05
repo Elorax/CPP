@@ -25,6 +25,6 @@ int main()
 	Bureaucrat	john("John", 1);
 	john.signForm(*rrf);
 	john.executeForm(*rrf);
-	cout << *rrf;
+	std::cout << *rrf;
 	delete rrf;
 }
