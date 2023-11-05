@@ -15,35 +15,32 @@
 #include <fstream>
 #include <sstream>
 
-using std::string;
-using std::cout;
-using std::endl;
 
 int main(int ac, char **av)
 {
 	if (ac != 4)
 	{
-		cout << "wrong usage.\n./SIFL <filename> <s1> <s2>" << endl;
+		std::cout << "wrong usage.\n./SIFL <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
 
-	string filename = av[1];
-	string s1 = av[2];
-	string s2 = av[3];
-	string str;
+	std::string filename = av[1];
+	std::string s1 = av[2];
+	std::string s2 = av[3];
+	std::string str;
 //	char	*c_filename = new char[filename.length() + 1];
 //	std::strcpy(c_filename, 
 
 	if (!s1[0])
 	{
-		cout << "Error : s1 must not be empty." << endl;
+		std::cout << "Error : s1 must not be empty." << std::endl;
 		return (1);
 	}
 
 	std::ifstream ifs(filename.c_str(), std::ifstream::in);
 	if (!ifs.good())
 	{
-		cout << "Error : could not open file " << filename << endl;
+		std::cout << "Error : could not open file " << filename << std::endl;
 		return (1);
 	}
 	std::ofstream ofs ((filename + ".replace").c_str(), std::ofstream::out);
@@ -52,7 +49,7 @@ int main(int ac, char **av)
 	str = buffer.str();
 	size_t	found(str.find(s1));
 
-	while (found != string::npos)
+	while (found != std::string::npos)
 	{
 		str.erase(found, s1.size());
 		str.insert(found, s2);

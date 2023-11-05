@@ -15,16 +15,13 @@
 # include <iostream>
 # include <string>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Harl
 {
 	public:
 	Harl();
 	~Harl();
-	void	complain(string level);
+	void	complain(std::string level);
 
 	private:
 	void	debug(void);

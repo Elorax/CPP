@@ -16,13 +16,13 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		cout << "Please execute program with \"DEBUG\", \"INFO\", \"WARNING\", or \"ERROR\" argument." << endl;
+		std::cout << "Please execute program with \"DEBUG\", \"INFO\", \"WARNING\", or \"ERROR\" argument." << std::endl;
 		return (1);
 	}
 
 	Harl	harl;
-	string level = av[1];
-	string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	std::string level = av[1];
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int asked_level(-1);
 	for(int i(0);i < 4; i++)
 	{
@@ -32,20 +32,20 @@ int main(int ac, char **av)
 	switch (asked_level)
 	{
 		case 0:
-			cout << "[ " << levels[0] << " ]" << endl;
+			std::cout << "[ " << levels[0] << " ]" << std::endl;
 			harl.complain(levels[0]);
 		case 1:
-			cout << "[ " << levels[1] << " ]" << endl;
+			std::cout << "[ " << levels[1] << " ]" << std::endl;
 			harl.complain(levels[1]);
 		case 2:
-			cout << "[ " << levels[2] << " ]" << endl;
+			std::cout << "[ " << levels[2] << " ]" << std::endl;
 			harl.complain(levels[2]);
 		case 3:
-			cout << "[ " << levels[3] << " ]" << endl;
+			std::cout << "[ " << levels[3] << " ]" << std::endl;
 			harl.complain(levels[3]);
 			break;
 		default:
-			cout << "[ Probably complaining about insgnificant problems ]" << endl;	
+			std::cout << "[ Probably complaining about insgnificant problems ]" << std::endl;	
 			break;
 	}
 	return (0);

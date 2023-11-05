@@ -15,28 +15,25 @@
 # include <iostream>
 # include <string>
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	Contact
 {
 	public:
-	Contact(string const &firstName, string const &lastName, string const &nickname, string const &phoneNumber, string const &darkestSecret);
+	Contact(std::string const &firstName, std::string const &lastName, std::string const &nickname, std::string const &phoneNumber, std::string const &darkestSecret);
 	Contact();
 	~Contact();
-	string	getFirstName() const;
-	string	getLastName() const;
-	string	getNickname() const;
-	string	getPhoneNumber() const;
-	string	getDarkestSecret() const;
+	std::string	getFirstName() const;
+	std::string	getLastName() const;
+	std::string	getNickname() const;
+	std::string	getPhoneNumber() const;
+	std::string	getDarkestSecret() const;
 
 	private:
-	string	_firstName;
-	string	_lastName;
-	string	_nickname;
-	string	_phoneNumber;
-	string	_darkestSecret;
+	std::string	_firstName;
+	std::string	_lastName;
+	std::string	_nickname;
+	std::string	_phoneNumber;
+	std::string	_darkestSecret;
 };
 
 #endif

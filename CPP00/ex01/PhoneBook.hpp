@@ -16,16 +16,13 @@
 # include <string>
 # include "Contact.hpp"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
 
 class	PhoneBook
 {
 	public:
 	PhoneBook();
 	~PhoneBook();
-	void	newContact(string const &firstName, string const &lastName, string const &nickname, string const &phoneNumber, string const &darkestSecret);
+	void	newContact(std::string const &firstName, std::string const &lastName, std::string const &nickname, std::string const &phoneNumber, std::string const &darkestSecret);
 	void	printContacts(void) const;
 	void	printInfo(int nbContact) const;
 	int	getNbContacts(void) const;
@@ -37,6 +34,6 @@ class	PhoneBook
 	int	_nbContacts;
 };
 
-string	toShort(const string &s);
+std::string	toShort(const std::string &s);
 
 #endif

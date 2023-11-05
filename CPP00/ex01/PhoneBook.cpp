@@ -21,7 +21,7 @@ PhoneBook::~PhoneBook()
 
 }
 
-void	PhoneBook::newContact(string const &firstName, string const &lastName, string const &nickname, string const &phoneNumber, string const &darkestSecret)
+void	PhoneBook::newContact(std::string const &firstName, std::string const &lastName, std::string const &nickname, std::string const &phoneNumber, std::string const &darkestSecret)
 {
 	this->_contact[this->_nbContacts % 8] = Contact(firstName, lastName, nickname, phoneNumber, darkestSecret);
 	this->_nbContacts++;
@@ -38,14 +38,14 @@ int	PhoneBook::getNbContacts(void) const
 
 void	PhoneBook::printContacts(void) const
 {
-	cout << "     Index|   F. Name|   L. Name|  Nickname|" << endl;
+	std::cout << "     Index|   F. Name|   L. Name|  Nickname|" << std::endl;
 	for (int i = 0; i < this->_nbContacts && i < 8; i++)
 		PhoneBook::printContact(i);
 	return ;
 }
-string	toShort(const string &s)
+std::string	toShort(const std::string &s)
 {
-	string str(s);
+	std::string str(s);
 
 	if (str.size() < 10)
 		str.insert(0, 10 - str.size(), ' ');
@@ -56,23 +56,23 @@ string	toShort(const string &s)
 }
 void	PhoneBook::printContact(int i) const
 {
-	cout << "         " << i << "|";
-	cout << toShort(this->_contact[i].getFirstName()) << "|";
-	cout << toShort(this->_contact[i].getLastName()) << "|";
-	cout << toShort(this->_contact[i].getNickname()) << "|" << endl;
+	std::cout << "         " << i << "|";
+	std::cout << toShort(this->_contact[i].getFirstName()) << "|";
+	std::cout << toShort(this->_contact[i].getLastName()) << "|";
+	std::cout << toShort(this->_contact[i].getNickname()) << "|" << std::endl;
 }
 
 void	PhoneBook::printInfo(int nbContact) const
 {
 	if (nbContact < 0 || nbContact >= this->_nbContacts)
 	{
-		cout << "Non existing contact. Please refer to PEBKAC manual" << endl;
+		std::cout << "Non existing contact. Please refer to PEBKAC manual" << std::endl;
 		return ;
 	}
-	cout << "\x1b[2J\x1b[H";
-	cout << "First name     : " << this->_contact[nbContact].getFirstName() << endl;
-	cout << "Last name      : " << this->_contact[nbContact].getLastName() << endl;
-	cout << "Nickname       : " << this->_contact[nbContact].getNickname() << endl;
-	cout << "Phone number   : " << this->_contact[nbContact].getPhoneNumber() << endl;
-	cout << "Darkest secret : " << this->_contact[nbContact].getDarkestSecret() << endl;
+	std::cout << "\x1b[2J\x1b[H";
+	std::cout << "First name     : " << this->_contact[nbContact].getFirstName() << std::endl;
+	std::cout << "Last name      : " << this->_contact[nbContact].getLastName() << std::endl;
+	std::cout << "Nickname       : " << this->_contact[nbContact].getNickname() << std::endl;
+	std::cout << "Phone number   : " << this->_contact[nbContact].getPhoneNumber() << std::endl;
+	std::cout << "Darkest secret : " << this->_contact[nbContact].getDarkestSecret() << std::endl;
 }
