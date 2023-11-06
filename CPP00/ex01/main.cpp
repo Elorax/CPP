@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:06:59 by abiersoh          #+#    #+#             */
-/*   Updated: 2022/05/21 03:07:02 by abiersoh         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:41:14 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ bool	input_search(std::string const &str, PhoneBook const &rep)
 
 void	searchContact(PhoneBook &rep)
 {
+	if (rep.getNbContacts() == 0)
+	{
+		std::cout << "\x1b[2J\x1b[H";
+		std::cout << "Phonebook is empty." << std::endl;
+		return ;
+	}
 	std::string	str("");
 	while (!input_search(str, rep))
 	{
