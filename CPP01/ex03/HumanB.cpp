@@ -12,9 +12,8 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : m_name(name)
+HumanB::HumanB(std::string name, Weapon *weapon) : m_name(name), m_weapon(weapon)
 {
-	this->m_weapon = NULL;
 }
 
 HumanB::~HumanB()
