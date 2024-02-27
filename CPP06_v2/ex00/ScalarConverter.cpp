@@ -108,7 +108,7 @@ bool	ScalarConverter::isFloat(const std::string &str)	//might change with atof
 	{
 		if (*it == '.')
 		{
-			if (nbPts++)
+			if (nbPts++)	//str contenant plusieurs pts : bad input
 				return false;
 		}
 		else if (!isdigit(*it))
@@ -116,7 +116,7 @@ bool	ScalarConverter::isFloat(const std::string &str)	//might change with atof
 		else
 			nbDigits++;
 	}
-	return (*it == 'f' && nbPts == 1 && nbDigits);
+	return (*it == 'f' && nbPts <= 1 && nbDigits);
 }
 
 bool	ScalarConverter::isDouble(const std::string &str)	//might change with atof def of float input 
@@ -141,5 +141,5 @@ bool	ScalarConverter::isDouble(const std::string &str)	//might change with atof 
 		else
 			nbDigits++;
 	}
-	return (nbPts == 1 && nbDigits);
+	return ((nbPts == 1 || atof(str.c_str()) > 2147483647 || atof(str.c_str()) < -2147483648) && nbDigits);
 }
